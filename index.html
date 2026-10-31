@@ -1,0 +1,1200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Girls with Goals | Ascend Girls Network</title>
+<meta name="description" content="Girls with Goals puts career clarity, confidence and a real plan into the hands of girls at the age when their futures are decided. Institutions buy it. She receives it free.">
+<link rel="icon" href="./favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="canonical" href="https://www.ascendgirlsnetwork.com/">
+<meta name="theme-color" content="#2A1B4D">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ascend Girls Network">
+<meta property="og:title" content="Every girl deserves a map to her future. | Girls with Goals">
+<meta property="og:description" content="Institutions buy it. She receives it free. Girls with Goals serves girls in every country.">
+<meta property="og:image" content="https://www.ascendgirlsnetwork.com/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Caveat:wght@600;700&display=swap">
+<style>
+:root{
+  --cream:#FFF6EA; --white:#FFFFFF; --ink:#231A3A; --muted:#5B5170; --muted2:#4A405E;
+  --indigo:#2A1B4D; --indigo-2:#372561; --coral:#E14E2D; --brick:#C23E1D; --gold:#F5AD09; --gold-deep:#7E5700;
+  --gold-soft:#FFF0C7; --coral-soft:#FDE3DC; --lilac:#ECE7F6; --lilac-bg:#F3EFFA; --line:#EEE8F5;
+  --g-coral:linear-gradient(135deg,#F0643A 0%,#E14E2D 45%,#C23E1D 100%);
+  --g-indigo:linear-gradient(150deg,#3B2470 0%,#2A1B4D 55%,#1C1136 100%);
+  --shadow:0 24px 48px -32px rgba(35,26,58,.35);
+  --pad:clamp(20px,5vw,48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3,h4,p,ul,ol,figure,blockquote{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+img{max-width:100%;display:block}
+button,input,select,textarea{font:inherit;color:inherit}
+.h{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.1;text-wrap:balance}
+.ms{width:1em;height:1em;font-size:24px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block;vertical-align:middle}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:16px;top:-60px;z-index:100;background:var(--indigo);color:#fff;padding:12px 18px;border-radius:12px;font-weight:600}
+.skip:focus{top:16px}
+
+/* Layout */
+.wrap{max-width:1104px;margin:0 auto}
+.sec{position:relative;padding:112px var(--pad)}
+.bg-cream{background:var(--cream)}.bg-white{background:#fff}.bg-lilac{background:var(--lilac-bg)}
+.bg-indigo{background:var(--indigo);color:#fff}
+.head{max-width:780px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-weight:300;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--brick)}
+.eyebrow::before,.eyebrow::after{content:"";width:36px;height:1px;background:currentColor;opacity:.6}
+.eyebrow.left::before{display:none}
+.bg-indigo .eyebrow{color:var(--gold)}
+.h2{font-size:clamp(30px,3.6vw,44px)}
+.h3{font-size:clamp(22px,2.2vw,28px)}
+.lead{font-size:clamp(17px,1.4vw,19px);line-height:1.6;color:var(--muted2)}
+.bg-indigo .lead{color:#D9D1EC}
+.sub{margin-top:72px;text-align:center}
+.grid{display:grid;gap:24px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.g5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.mt-l{margin-top:56px}.mt-m{margin-top:32px}
+.card{background:#fff;border-radius:28px;padding:32px;box-shadow:var(--shadow);transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 30px 50px -30px rgba(35,26,58,.45)}
+.card p{color:var(--muted2)}
+.card.cream{background:var(--cream);box-shadow:none}
+.card.lilac{background:var(--lilac-bg);box-shadow:none}
+.card.dark{background:var(--indigo-2);color:#fff;box-shadow:none}
+.card.dark p{color:#D9D1EC}
+.card h3{margin-bottom:10px}
+.icon{width:48px;height:48px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px}
+.icon.coral{background:var(--coral-soft);color:var(--brick)}
+.icon.gold{background:var(--gold-soft);color:var(--gold-deep)}
+.icon.lilac{background:var(--lilac);color:var(--indigo)}
+.icon.white{background:#fff;color:var(--brick)}
+.icon.dk{background:rgba(245,173,9,.16);color:var(--gold)}
+.num{width:40px;height:40px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;margin-bottom:20px}
+.num.coral{background:var(--coral-soft);color:var(--brick)}
+.num.gold{background:var(--gold-soft);color:var(--gold-deep)}
+.num.lilac{background:var(--lilac);color:var(--indigo)}
+.num.white{background:#fff;color:var(--brick)}
+.chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.chips li{background:#fff;border-radius:999px;padding:10px 20px;font-size:15px;font-weight:500;box-shadow:0 8px 22px -16px rgba(35,26,58,.4)}
+.check{display:flex;flex-direction:column;gap:14px}
+.check li{display:flex;gap:12px;align-items:flex-start}
+.check .ms{color:var(--brick);font-size:22px;margin-top:1px}
+.email{font-family:'Space Grotesk',sans-serif;font-weight:600}
+.mail{text-decoration:none;font-weight:600;border-bottom:2px solid var(--gold);padding-bottom:1px;overflow-wrap:anywhere}
+.mail:hover{border-color:var(--brick)}
+
+/* Buttons: gradient pills with an arrow badge */
+.btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:14px;min-height:56px;padding:0 8px 0 28px;border-radius:999px;border:0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;text-decoration:none;cursor:pointer;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+.btn .ar{width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.2);transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.btn .ar .ms{font-size:20px}
+.btn:hover{transform:translateY(-2px)}
+.btn:hover .ar{transform:rotate(45deg)}
+.btn:focus-visible,.nav a:focus-visible,.mail:focus-visible,.menu-btn:focus-visible,.ev-links a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.bp{background:var(--g-coral);color:#fff;box-shadow:0 14px 28px -14px rgba(194,62,29,.7)}
+.bi{background:var(--g-indigo);color:#fff;box-shadow:0 14px 28px -14px rgba(42,27,77,.7)}
+.bw{background:#fff;color:var(--ink);padding:0 28px;box-shadow:0 10px 24px -16px rgba(35,26,58,.4)}
+.btn.sm{min-height:48px;font-size:15px;padding-left:22px}
+.btn.sm .ar{width:34px;height:34px}
+
+/* Header */
+.site-head{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 4px 24px rgba(35,26,58,.06)}
+.head-in{max-width:1180px;margin:0 auto;height:84px;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo img{width:184px;height:auto}
+.nav{display:flex;align-items:center;gap:24px}
+.nav ul{display:flex;gap:20px}
+.nav ul a{font-size:14.5px;font-weight:500;color:var(--muted2);text-decoration:none;white-space:nowrap;padding:6px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav ul a:hover{color:var(--brick);border-color:var(--gold)}
+.nav .btn{min-height:48px;font-size:15px;padding:0 7px 0 22px;color:#fff;border:0}
+.nav .btn .ar{width:34px;height:34px}
+.menu-btn{display:none;width:48px;height:48px;border-radius:50%;border:2px solid var(--ink);background:#fff;cursor:pointer;align-items:center;justify-content:center}
+
+/* Hero */
+.hero{padding:88px var(--pad) 112px;text-align:center;background:
+  radial-gradient(40% 50% at 10% 15%,rgba(245,173,9,.16),transparent 70%),
+  radial-gradient(35% 45% at 92% 20%,rgba(225,78,45,.10),transparent 70%),var(--cream)}
+.hero h1{font-size:clamp(38px,5.6vw,68px);max-width:900px;margin:22px auto 0}
+.hero h1 .map{position:relative;color:var(--brick);display:inline-block}
+.hero h1 .map svg{position:absolute;left:0;bottom:-8px;width:100%;height:14px}
+.hero .lead{max-width:680px;margin:26px auto 0}
+.motto{font-family:'Space Grotesk',sans-serif;font-style:italic;font-weight:700;font-size:clamp(22px,2.4vw,30px);color:var(--brick);letter-spacing:.02em;margin-top:28px}
+.hero .motto{font-family:'Caveat','Comic Sans MS',cursive;font-style:normal;font-weight:700;font-size:clamp(30px,3.2vw,40px);letter-spacing:0;line-height:1.15}
+.hero .btns{margin-top:36px}
+.global{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-size:15px;color:var(--muted)}
+.global .ms{color:var(--indigo);font-size:20px}
+.feature{margin:64px auto 0;max-width:1024px;background:#fff;border-radius:32px;padding:40px;display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:center;text-align:left;box-shadow:0 40px 70px -46px rgba(35,26,58,.45)}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--coral-soft);color:var(--brick);border-radius:999px;padding:7px 16px;font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+.pill .ms{font-size:18px}
+.feature h2{font-size:clamp(24px,2.4vw,30px);margin-top:20px}
+.feature p.t{margin-top:14px;color:var(--muted2)}
+.minis{margin-top:24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.minis li{background:var(--cream);border-radius:16px;padding:14px 16px}
+.minis b{display:block;font-family:'Space Grotesk',sans-serif;font-size:19px;color:var(--brick)}
+.minis span{font-size:13px;line-height:1.35;color:var(--muted2)}
+.feature-img{position:relative;border-radius:22px;overflow:hidden;background:var(--gold-soft);aspect-ratio:4/5}
+.feature-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.feature-img .tagline{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(42,27,77,.92);color:#fff;border-radius:16px;padding:14px 18px}
+.feature-img .tagline b{display:block;font-family:'Space Grotesk',sans-serif;color:var(--gold);font-size:15px;letter-spacing:.04em;text-transform:uppercase}
+.feature-img .tagline span{font-size:13.5px;color:#E4DDF3}
+
+/* Scale */
+.stat-big{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(48px,5vw,64px);line-height:1;letter-spacing:-.03em}
+.stat-pre{font-size:14px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.scale .card{padding:40px}
+.scale .card p.t{margin-top:14px;font-size:18px}
+.c-coral .stat-big,.c-coral .stat-pre{color:var(--brick)}
+.c-ink .stat-big{color:var(--indigo)}.c-ink .stat-pre{color:var(--muted)}
+.foot-tag{margin-top:24px;background:#fff;border-radius:14px;padding:14px 18px;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.c-coral .foot-tag{color:var(--brick)}
+.c-ink .foot-tag{background:rgba(255,255,255,.7);color:var(--indigo)}
+
+/* What it does */
+.does .card{display:flex;flex-direction:column}
+.does .card p{flex:1}
+.does .shot{margin-top:24px;border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:var(--cream)}
+.does .shot img{width:100%;height:100%;object-fit:cover}
+
+/* Model */
+.quote-card{background:var(--indigo-2);border-radius:32px;padding:56px 48px;box-shadow:0 40px 70px -40px rgba(0,0,0,.6)}
+.quote-card .qm{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:72px;line-height:.6;color:var(--coral);height:34px;display:block}
+.quote-card p{font-size:clamp(26px,3vw,38px);margin-top:18px;max-width:900px}
+.quote-card p span{color:var(--gold)}
+.inst .card h3{font-family:"Outfit",sans-serif;font-weight:500;letter-spacing:0;font-size:17px;line-height:1.45;margin-bottom:0}
+
+/* Why */
+.prob{display:grid;grid-template-columns:7fr 5fr;gap:48px;align-items:center}
+.prob p+p{margin-top:16px}
+.prob .copy p{color:var(--muted2)}
+.stat-card{background:#fff;border-radius:28px;padding:36px;box-shadow:var(--shadow)}
+.stat-card .stat-big{color:var(--brick);font-size:clamp(60px,6vw,80px)}
+.stat-card .who{margin-top:12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:18px;line-height:1.35}
+.stat-card blockquote{margin-top:24px;background:var(--cream);border-radius:16px;padding:18px 20px;font-style:italic;color:var(--muted2)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.pair .card p+p{margin-top:12px}
+.pair .card.dark{display:flex;flex-direction:column;justify-content:center}
+.pair .card.dark .big{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(26px,2.6vw,34px);line-height:1.2;color:#fff}
+.pair .card.dark .big span{color:var(--gold)}
+.free{display:grid;grid-template-columns:5fr 7fr;gap:40px;align-items:center}
+.free .lead-b{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(22px,2.2vw,28px);line-height:1.25;color:var(--brick)}
+.free p+p{margin-top:14px}
+.thesis{text-align:center;padding:56px 40px}
+.thesis .h2{margin-top:14px}
+.thesis p{max-width:640px;margin:16px auto 0;font-size:18px}
+.thesis .draw{margin-top:18px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;color:var(--brick)}
+
+/* The book */
+.journey{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.journey li{background:var(--cream);border-radius:22px;padding:22px}
+.journey b{display:block;font-family:'Space Grotesk',sans-serif;font-size:20px;color:var(--brick)}
+.journey li:nth-child(2) b{color:var(--gold-deep)}
+.journey li:nth-child(3) b{color:var(--indigo)}
+.journey li:nth-child(4){background:var(--indigo);color:#fff}
+.journey li:nth-child(4) b{color:var(--gold)}
+.journey span{font-size:15px}
+.what-is{display:grid;grid-template-columns:4fr 8fr;gap:40px;align-items:center}
+.what-is .art{background:var(--gold-soft);border-radius:24px;padding:28px;display:flex;justify-content:center}
+.what-is .art img{height:280px;width:auto;transform:rotate(-4deg);filter:drop-shadow(0 20px 26px rgba(35,26,58,.3))}
+.what-is .big{font-size:clamp(19px,1.8vw,23px);line-height:1.5;color:var(--ink)}
+.what-is p+p{margin-top:14px}
+.inside .card{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
+.inside .icon{margin-bottom:0}
+.duo{background:var(--cream);border-radius:32px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.duo .k{font-weight:500;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--brick)}
+.duo h3{margin:10px 0 14px}
+.duo p{color:var(--muted2)}
+.duo p+p{margin-top:12px}
+.duo .chips{justify-content:flex-start;margin-top:4px}
+.duo .chips{gap:8px}
+.duo .chips li{font-size:13.5px;padding:8px 14px}
+.duo .note{margin-top:20px;display:flex;gap:12px;align-items:flex-start;background:var(--coral-soft);color:var(--brick);border-radius:16px;padding:16px 18px;font-weight:600}
+.cta-line{margin-top:56px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.cta-line p{font-size:18px;font-weight:500}
+
+/* Impact */
+.phase .card{display:flex;flex-direction:column;justify-content:flex-end}
+.phase .k{color:var(--gold);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(22px,2.2vw,28px);line-height:1.1;margin-bottom:8px}
+.phase h3{font-size:22px;margin:8px 0 8px}
+.phase .p1{min-height:180px}.phase .p2{min-height:210px}.phase .p3{min-height:240px}
+.phase .p4{min-height:270px;background:var(--g-coral)}
+.phase .p4 .k{color:#FFE3A3}.phase .p4 p{color:#FFE9E1}
+.note-row{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.note-row p{color:#D9D1EC}
+.note-row .strong{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(20px,1.9vw,24px);line-height:1.3;color:#fff;border-left:3px solid var(--gold);padding-left:20px}
+.measure{margin-top:72px;background:var(--indigo-2);border-radius:32px;padding:44px}
+.measure ul{margin-top:24px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.measure li{background:rgba(255,255,255,.08);border-radius:18px;padding:18px}
+.measure li b{display:block;color:var(--gold);font-family:'Space Grotesk',sans-serif;font-size:18px;margin-bottom:6px}
+.measure li span{font-size:15px;line-height:1.4}
+.measure .foot{margin-top:24px;font-family:'Space Grotesk',sans-serif;font-weight:600;color:var(--gold)}
+.sdg .card p{color:var(--muted2)}
+.sdg-tag{display:inline-block;border-radius:999px;padding:6px 14px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;margin-bottom:18px}
+.t4{background:var(--coral-soft);color:var(--brick)}.t5{background:var(--gold-soft);color:var(--gold-deep)}.t8{background:var(--lilac);color:var(--indigo)}
+.center-note{max-width:680px;margin:36px auto 0;text-align:center}
+.bg-indigo .center-note{color:#D9D1EC}
+
+/* Governance */
+.gov .card h3{font-size:20px;line-height:1.3}
+.banner{max-width:680px;margin:40px auto 0;background:#fff;border-radius:20px;padding:22px 28px;text-align:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;box-shadow:var(--shadow)}
+
+/* Partners */
+.steps .card h3{font-size:18px;line-height:1.35;font-family:'Outfit',sans-serif;font-weight:500;margin:0;letter-spacing:0}
+.receive{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.receive .card.dark{display:flex;flex-direction:column}
+.receive .card.dark .k{font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.receive .card.dark h3{margin:12px 0}
+.receive .card.dark .lead-b{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:#fff;margin-bottom:10px}
+
+/* Past events */
+.event{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;max-width:920px;margin:56px auto 0}
+.date{width:132px;height:132px;border-radius:50%;background:var(--g-coral);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.date b{font-family:'Space Grotesk',sans-serif;font-size:52px;line-height:.9}
+.date span{font-size:14px;font-weight:500}
+.event h3{font-size:clamp(22px,2.4vw,30px)}
+.event .loc{margin-top:8px;font-weight:500}
+.event .loc a{color:var(--brick);text-underline-offset:3px}
+.event p.t{margin-top:8px;color:var(--muted2)}
+.ev-links{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+.ev-links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:2px solid var(--indigo);color:var(--indigo);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;text-decoration:none;transition:background-color .2s,color .2s}
+.ev-links a:hover{background:var(--indigo);color:#fff}
+.ev-links .ms{font-size:18px}
+.more{margin-top:24px;text-align:center;color:var(--muted)}
+
+/* Report */
+.meta{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;background:var(--gold-soft);border-radius:999px;padding:9px 18px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px}
+.meta .ms{font-size:18px;color:var(--brick)}
+.glance{background:var(--lilac-bg);border-radius:28px;padding:40px}
+.glance ul{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.glance li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed rgba(42,27,77,.15)}
+.glance .ms{color:var(--brick);font-size:22px}
+.rep .card p+p{margin-top:12px}
+.rep .hl{font-family:'Space Grotesk',sans-serif;font-weight:600;color:var(--brick)!important;font-size:18px;line-height:1.4}
+.exp .card{padding:26px}
+.exp .card h4{font-family:'Space Grotesk',sans-serif;font-size:18px;line-height:1.3;margin-bottom:8px}
+.exp .card p{font-size:15px}
+.exp .ms{color:var(--brick);font-size:26px;margin-bottom:14px}
+.words{max-width:900px;margin:72px auto 0;background:var(--indigo);color:#fff;border-radius:32px;padding:48px;text-align:center}
+.words .eyebrow{color:var(--gold)}
+.words blockquote{margin-top:22px;font-family:'Space Grotesk',sans-serif;font-style:italic;font-weight:600;font-size:clamp(19px,2vw,24px);line-height:1.45}
+.words blockquote+blockquote{margin-top:16px}
+.words p{margin-top:22px;color:#D9D1EC}
+.tiers{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.tiers li{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:var(--cream);border-radius:14px;padding:12px 16px}
+.tiers b{font-family:'Space Grotesk',sans-serif}
+.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 12px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.b-plat{background:var(--indigo);color:#fff}.b-gold{background:var(--gold-soft);color:var(--gold-deep)}.b-silver{background:var(--lilac);color:var(--indigo)}.b-comm{background:var(--coral-soft);color:var(--brick)}
+.next{background:var(--cream)!important;box-shadow:none!important}
+.closing{margin:64px auto 0;max-width:820px;text-align:center;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(20px,2vw,24px);line-height:1.4;color:var(--indigo)}
+
+/* Gallery */
+.albums{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px}
+.album{grid-column:span 2;background:#fff;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.album.wide{grid-column:span 3}
+.album .ph{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:rgba(42,27,77,.3);background:repeating-linear-gradient(135deg,rgba(255,255,255,.45) 0 14px,transparent 14px 28px),var(--lilac)}
+.album.wide .ph{aspect-ratio:16/9}
+.album:nth-child(2) .ph{background-color:var(--gold-soft)}
+.album:nth-child(3) .ph{background-color:var(--coral-soft)}
+.album:nth-child(4) .ph{background-color:#FFE7A8}
+.album .ph .ms{font-size:40px}
+.album .txt{padding:18px 20px 22px}
+.album h3{font-family:'Space Grotesk',sans-serif;font-size:17px}
+.album p{margin-top:4px;font-size:14.5px;color:var(--muted2)}
+.gal-foot{margin-top:28px;text-align:center;font-size:15px;color:var(--muted)}
+
+/* Supporters */
+.sup .card{display:flex;flex-direction:column}
+.sup .top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-bottom:20px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+.sup .logo-box{height:56px;display:flex;align-items:center}
+.sup .logo-box img{max-height:56px;max-width:200px;width:auto;object-fit:contain}
+.sup .logo-box img[src$=".svg"]{height:48px;width:180px}
+.wordmark{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;letter-spacing:-.02em;color:#1F2A44}
+.wordmark span{font-weight:500;color:#9A7B3E}
+.sup .card h3{font-size:24px}
+.sup .card p+p{margin-top:10px}
+.thanks{max-width:760px;margin:32px auto 0;background:#fff;border-radius:22px;padding:24px 28px;text-align:center;box-shadow:var(--shadow)}
+.thanks b{font-family:'Space Grotesk',sans-serif;display:block;margin-bottom:6px}
+.thanks p{color:var(--muted2)}
+.ways .card{text-align:center;padding:28px 22px}
+.ways .k{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--brick)}
+.ways h3{font-family:'Space Grotesk',sans-serif;font-size:17px;margin-top:8px;line-height:1.3}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:5fr 7fr;gap:32px;align-items:start}
+.desk{display:flex;flex-direction:column;gap:22px}
+.desk li{display:flex;gap:16px;align-items:center}
+.desk .icon{margin:0;flex-shrink:0}
+.desk small{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.desk b{font-family:'Space Grotesk',sans-serif;font-weight:600;overflow-wrap:anywhere}
+.form{background:#fff;border-radius:28px;padding:40px;box-shadow:var(--shadow)}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1 / -1}
+.field label{font-size:15px;font-weight:500}
+.field .req{color:var(--brick)}
+.field input,.field select,.field textarea{width:100%;min-height:54px;padding:13px 18px;border-radius:16px;border:2px solid #E4DDEF;background:#FBF9FD;font-size:16px;transition:border-color .2s,background-color .2s}
+.field textarea{min-height:130px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--indigo);background:#fff}
+.field input:user-invalid,.field select:user-invalid{border-color:var(--brick)}
+.hint{font-size:13px;color:var(--muted)}
+.actions{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:18px}
+.actions p{flex:1;min-width:220px;font-size:13px;color:var(--muted)}
+.actions p.err{color:var(--brick);font-weight:600}
+.done{display:none;flex-direction:column;align-items:flex-start;gap:14px}
+.form.sent form{display:none}
+.form.sent .done{display:flex}
+.done .icon{margin:0}
+
+/* Footer */
+.site-foot{background:var(--indigo);color:#fff;padding:64px var(--pad) 40px}
+.foot-grid{display:grid;grid-template-columns:5fr 4fr 4fr;gap:40px}
+.foot-grid .logo-chip{display:inline-block;background:#fff;border-radius:16px;padding:12px 16px}
+.foot-grid .logo-chip img{width:150px;height:auto}
+.foot-grid h4{font-family:'Space Grotesk',sans-serif;color:var(--gold);font-size:16px;margin-bottom:14px}
+.foot-grid p{color:#D9D1EC}
+.foot-links{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
+.foot-links a{text-decoration:none;color:#E4DDF3}
+.foot-links a:hover{color:#fff;text-decoration:underline}
+.foot-mail{display:flex;flex-direction:column;gap:14px}
+.foot-mail small{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#CFC7E2}
+.foot-mail a{color:#fff;text-decoration:none;font-weight:600;overflow-wrap:anywhere}
+.foot-mail a:hover{text-decoration:underline}
+.legal{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);text-align:center;font-size:14px;color:#CFC7E2}
+
+/* Motion */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.card,.btn,.btn .ar{transition:none}.card:hover,.btn:hover{transform:none}}
+
+/* Responsive */
+@media (max-width:1180px){
+  .menu-btn{display:inline-flex}
+  .nav{position:fixed;inset:84px 0 auto 0;background:#fff;flex-direction:column;align-items:stretch;gap:16px;padding:16px var(--pad) 24px;box-shadow:0 30px 40px -30px rgba(35,26,58,.4);opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .2s,transform .2s,visibility .2s}
+  .nav.open{opacity:1;visibility:visible;transform:none}
+  .nav ul{flex-direction:column;gap:0}
+  .nav ul a{display:block;font-size:17px;padding:12px 0}
+  .nav .btn{align-self:flex-start}
+}
+@media (max-width:1024px){
+  .g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .feature,.prob,.pair,.free,.what-is,.duo,.note-row,.receive,.contact,.foot-grid{grid-template-columns:1fr}
+  .feature-img{aspect-ratio:4/5;max-width:440px;width:100%;margin:0 auto}
+  .journey,.measure ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .phase .card{min-height:0!important}
+  .albums{grid-template-columns:1fr 1fr}
+  .album,.album.wide{grid-column:auto}
+  .album:last-child{grid-column:1 / -1}
+}
+@media (max-width:760px){
+  .sec{padding:80px var(--pad)}
+  .hero{padding:56px var(--pad) 80px}
+  .g2,.g3,.g4,.g5,.journey,.measure ul,.glance ul,.fields,.minis,.albums{grid-template-columns:1fr}
+  .album:last-child{grid-column:auto}
+  .head-in{height:72px}
+  .nav{inset:72px 0 auto 0}
+  .logo img{width:148px}
+  .feature,.quote-card,.duo,.measure,.glance,.words,.form,.thesis{padding:28px 22px;border-radius:24px}
+  .card{padding:26px 22px;border-radius:24px}
+  .hero .btns{flex-direction:column;align-items:center}
+  .event{grid-template-columns:1fr;gap:20px;justify-items:start}
+  .date{width:104px;height:104px}.date b{font-size:40px}
+  .inside .card{grid-template-columns:1fr}
+  .what-is .art img{height:220px}
+  .foot-links{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow_outward" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-autorenew" viewBox="0 0 24 24"><path d="M17 2l3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12"/><path d="M7 22l-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/></symbol>
+  <symbol id="i-balance" viewBox="0 0 24 24"><path d="M12 3v18M5 21h14M6 7h12M6 7l-3 7a3 3 0 0 0 6 0Zm12 0-3 7a3 3 0 0 0 6 0Z"/></symbol>
+  <symbol id="i-bar_chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  <symbol id="i-calendar_month" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-campaign" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-description" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6Z"/><path d="M14 3v5h5M9 13h7M9 17h7"/></symbol>
+  <symbol id="i-directions_bus" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16M8 21v-3M16 21v-3"/><circle cx="8" cy="14.5" r="1"/><circle cx="16" cy="14.5" r="1"/></symbol>
+  <symbol id="i-diversity_3" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c.8-3.5 3.5-5.5 7-5.5s6.2 2 7 5.5M16 14.5c2.8 0 5 1.6 5.8 4.5"/></symbol>
+  <symbol id="i-edit_note" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3 6 1.5 1.5L7 5M3 12l1.5 1.5L7 11M3 18l1.5 1.5L7 17"/></symbol>
+  <symbol id="i-emoji_events" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0Z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 21h8M9 17h6"/></symbol>
+  <symbol id="i-engineering" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+  <symbol id="i-event" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-explore" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5Z"/></symbol>
+  <symbol id="i-favorite" viewBox="0 0 24 24"><path d="M12 20s-8-4.5-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.5 12 20 12 20Z"/></symbol>
+  <symbol id="i-gavel" viewBox="0 0 24 24"><path d="M12 3v18M5 21h14M6 7h12M6 7l-3 7a3 3 0 0 0 6 0Zm12 0-3 7a3 3 0 0 0 6 0Z"/></symbol>
+  <symbol id="i-groups" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c.8-3.5 3.5-5.5 7-5.5s6.2 2 7 5.5M16 14.5c2.8 0 5 1.6 5.8 4.5"/></symbol>
+  <symbol id="i-handshake" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c.8-3.5 3.5-5.5 7-5.5s6.2 2 7 5.5M16 14.5c2.8 0 5 1.6 5.8 4.5"/></symbol>
+  <symbol id="i-health_and_safety" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-hourglass_top" viewBox="0 0 24 24"><path d="M6 3h12M6 21h12M7 3v3a5 5 0 0 0 10 0V3M7 21v-3a5 5 0 0 1 10 0v3"/></symbol>
+  <symbol id="i-location_on" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-mark_email_read" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-menu_book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2Z"/><path d="M4 21h15"/></symbol>
+  <symbol id="i-money_off" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8S10 3 7.5 4.5 9 8 12 8Zm0 0s2-5 4.5-3.5S15 8 12 8Z"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-1.5-1.5-2-1.5-3.2 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4c0-4-4-7-9-7Z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7" r="1"/></symbol>
+  <symbol id="i-photo_camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-photo_library" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4v-7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7h-2"/><path d="M6 14h12v7H6Z"/></symbol>
+  <symbol id="i-public" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+  <symbol id="i-record_voice_over" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+  <symbol id="i-school" viewBox="0 0 24 24"><path d="M3 10 12 5l9 5-9 5-9-5Z"/><path d="M7 12v5c3 2 7 2 10 0v-5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6Z"/></symbol>
+  <symbol id="i-storefront" viewBox="0 0 24 24"><path d="M3 9h18l-2-5H5Z"/><path d="M5 9v11h14V9M9 20v-6h6v6"/></symbol>
+  <symbol id="i-trending_down" viewBox="0 0 24 24"><path d="m3 7 6 6 4-4 8 8"/><path d="M15 17h6v-6"/></symbol>
+  <symbol id="i-verified" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-verified_user" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-visibility" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-volunteer_activism" viewBox="0 0 24 24"><path d="M12 20s-8-4.5-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.5 12 20 12 20Z"/></symbol>
+  <symbol id="i-wifi_off" viewBox="0 0 24 24"><path d="M2 8.8a15 15 0 0 1 20 0M5.5 12.3a10 10 0 0 1 13 0M9 15.8a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1"/><path d="M3 3l18 18"/></symbol>
+  <symbol id="i-work" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-head">
+  <div class="head-in">
+    <a class="logo" href="#top" aria-label="Ascend Girls Network, home"><img src="./assets/72f354eb3592d0125e2610cb80c3db66.png" alt="Ascend Girls Network" width="196" height="47"></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <ul>
+        <li><a href="#why">Why Girls with Goals</a></li>
+        <li><a href="#the-book">The Book</a></li>
+        <li><a href="#impact">Impact &amp; SDGs</a></li>
+        <li><a href="#governance">Governance</a></li>
+        <li><a href="#partners">Partners &amp; Bulk Orders</a></li>
+        <li><a href="#past-events">Past Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn bp" href="#contact" data-enquiry="partnership">Partner with us <span class="ar"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow_outward"/></svg></span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ 1. HOME: HERO ============ -->
+<section class="hero" id="hero" aria-labelledby="hero-h">
+  <p class="eyebrow">Girls with Goals</p>
+  <h1 id="hero-h" class="h">Every girl deserves a <span class="map">map<svg aria-hidden="true" viewBox="0 0 120 14" preserveAspectRatio="none"><path d="M3 9c30-7 70-8 114-3" fill="none" stroke="#F5AD09" stroke-width="4" stroke-linecap="round"/></svg></span> to her future.</h1>
+  <p class="lead">Girls with Goals puts career clarity, confidence and a real plan into the hands of girls at the age when their futures are decided. Institutions buy it. She receives it free.</p>
+  <p class="motto">“See It. Believe It. Plan It. Become It.”</p>
+  <div class="btns">
+    <a class="btn bp" href="#contact" data-enquiry="partnership">Partner with us <span class="ar"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow_outward"/></svg></span></a>
+    <a class="btn bi" href="#contact" data-enquiry="bulk">Order Girls with Goals in bulk <span class="ar"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow_outward"/></svg></span></a>
+    <a class="btn bw" href="#contact">Contact us</a>
+  </div>
+  <p class="global"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-public"/></svg>Girls with Goals serves girls in every country.</p>
+
+  <div class="feature reveal">
+    <div>
+      <span class="pill"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-menu_book"/></svg>The Model in One Line</span>
+      <h2 class="h">An institution buys. A girl receives it free. Her name and a letter written for her sit inside.</h2>
+      <p class="t">Girls with Goals is a structured, self guided career and confidence journal.</p>
+      <ul class="minis">
+        <li><b>20M+</b><span>copies a month, production capacity</span></li>
+        <li><b>SDG 4, 5, 8</b><span>measurable and reportable outcomes</span></li>
+        <li><b>Free</b><span>to every girl who receives it</span></li>
+      </ul>
+    </div>
+    <figure class="feature-img">
+      <img src="./assets/photos/hero-girl-with-book.webp" alt="Illustration of a smiling girl holding up her Girls with Goals journal" width="1122" height="1402">
+      <figcaption class="tagline"><b>See It. Believe It.</b><span>Plan It. Become It.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ THE SCALE OF THE PROBLEM ============ -->
+<section class="sec bg-white scale" id="scale" aria-labelledby="scale-h">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">The Scale of the Problem</p>
+      <h2 id="scale-h" class="h h2">This is not one continent’s problem.</h2>
+      <p class="lead">It is every country’s problem, and it is solvable in every country.</p>
+    </div>
+    <div class="grid g2 mt-l">
+      <article class="card cream c-coral reveal">
+        <span class="icon coral"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-trending_down"/></svg></span>
+        <p class="stat-pre">Close to</p>
+        <p class="stat-big">1 billion</p>
+        <p class="t">girls and women worldwide lack the skills to succeed in a changing job market.</p>
+      </article>
+      <article class="card lilac c-ink reveal">
+        <span class="icon white" style="color:var(--indigo)"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hourglass_top"/></svg></span>
+        <p class="stat-pre">More than</p>
+        <p class="stat-big">600 million</p>
+        <p class="t">adolescent girls are deciding who they will become, right now.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT GIRLS WITH GOALS DOES ============ -->
+<section class="sec bg-lilac does" id="what-it-does" aria-labelledby="does-h">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">What Girls with Goals Does</p>
+      <h2 id="does-h" class="h h2">It does three things that nothing else in a girl’s school day does.</h2>
+    </div>
+    <div class="grid g3 mt-l">
+      <article class="card reveal">
+        <span class="num coral">01</span>
+        <h3 class="h h3">It shows her where her subjects lead</h3>
+        <p>Mathematics, physical science, accounting and life sciences stop being homework. They become doors to named careers, explained in plain language.</p>
+        <div class="shot"><img src="./assets/photos/stem-mentor.webp" alt="Illustration of an engineer showing girls a blueprint" width="1448" height="1086" loading="lazy"></div>
+      </article>
+      <article class="card reveal">
+        <span class="num gold">02</span>
+        <h3 class="h h3">It builds the belief that she belongs there</h3>
+        <p>She meets illustrated women in science, technology, engineering, medicine, law, business and more, with different skin tones, hair, faiths and heritage, so every girl sees herself on the page.</p>
+        <div class="shot"><img src="./assets/photos/science-lab.webp" alt="Illustration of a scientist guiding two girls at a microscope" width="1448" height="1086" loading="lazy"></div>
+      </article>
+      <article class="card reveal">
+        <span class="num lilac">03</span>
+        <h3 class="h h3">It turns a dream into a plan</h3>
+        <p>Goals, values, decisions and accountability, written by her, in her own hand, in a book she keeps.</p>
+        <div class="shot"><img src="./assets/photos/girl-journaling.webp" alt="Illustration of a girl writing her goals beside her journal" width="1448" height="1086" loading="lazy"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODEL + WHY INSTITUTIONS CHOOSE IT ============ -->
+<section class="sec bg-indigo" id="model" aria-labelledby="inst-h">
+  <div class="wrap">
+    <blockquote class="quote-card reveal">
+      <span class="qm" aria-hidden="true">“</span>
+      <p class="h">An institution buys. A girl receives it free. <span>Her name and a letter written for her sit inside.</span></p>
+    </blockquote>
+    <div class="head mt-l reveal">
+      <h2 id="inst-h" class="h h2">Why Institutions Choose It</h2>
+    </div>
+    <ul class="grid g5 mt-m inst">
+      <li class="card dark reveal"><span class="icon dk"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-autorenew"/></svg></span><h3 class="h">One book, used again and again, not a single workshop that ends.</h3></li>
+      <li class="card dark reveal"><span class="icon dk"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wifi_off"/></svg></span><h3 class="h">No electricity, no internet and no facilitator needed.</h3></li>
+      <li class="card dark reveal"><span class="icon dk"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-print"/></svg></span><h3 class="h">Built to reach millions, with production capacity above 20 million copies a month.</h3></li>
+      <li class="card dark reveal"><span class="icon dk"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-verified"/></svg></span><h3 class="h">Aligned to SDG 4, SDG 5 and SDG 8, with measurable and reportable outcomes.</h3></li>
+      <li class="card dark reveal"><span class="icon dk"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg></span><h3 class="h">Your institution’s name on the cover of every copy, and a personal letter inside.</h3></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PROOF + CLOSING CTA ============ -->
+<section class="sec bg-white" id="proof" aria-labelledby="proof-h">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2 id="proof-h" class="h h2">Proof That We Deliver</h2>
+      <p class="lead">On <strong>20 October 2026</strong>, with the support of <strong>Sibanye-Stillwater, Harmony Gold, Lenmed and Lusenga Inc</strong>, our first Career Expo put more than <strong>500 girls</strong> in front of the careers their subjects lead to.</p>
+      <p class="lead">Read the report and see the photographs in <a class="mail" href="#past-events">Past Events</a>.</p>
+    </div>
+    <div class="card cream thesis mt-l reveal">
+      <h2 class="h h2">Put your name behind the girls who will lead the next generation.</h2>
+      <p><span class="email">Email:</span> <a class="mail" href="mailto:partnerships@ascendgirlsnetwork.com">partnerships@ascendgirlsnetwork.com</a></p>
+      <div class="btns" style="margin-top:24px"><a class="btn bp" href="#contact" data-enquiry="partnership">Partner with us <span class="ar"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow_outward"/></svg></span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. WHY GIRLS WITH GOALS ============ -->
+<section class="sec bg-cream" id="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Why Girls with Goals</p>
+      <h2 id="why-h" class="h h2">The window is adolescence. The time is now.</h2>
+    </div>
+
+    <div class="prob mt-l">
+      <div class="copy reveal">
+        <h3 class="h h3" style="margin-bottom:16px">The Problem</h3>
+        <p class="lead" style="color:var(--ink)">A girl can be talented, hardworking and top of her class, and still leave school with no idea what to do next. Not because she lacks ambition. Because nobody has shown her the road from her timetable to a career.</p>
+        <p>In many school systems, career guidance is a single subject, if it exists at all. A girl who cannot see how her subjects connect to a future is more likely to lose interest, fall behind and leave school. When that happens, doors close early. Girls drop out. Girls fall pregnant. Girls end up in relationships they cannot leave because they have no income of their own.</p>
+        <p>The numbers say the same thing. Youth unemployment is rising in many regions.</p>
+      </div>
+      <aside class="stat-card reveal" aria-label="Youth unemployment in South Africa">
+        <span class="pill"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bar_chart"/></svg>South Africa</span>
+        <p class="who" style="margin-top:20px">In South Africa, where we are based,</p>
+        <p class="stat-big">51%</p>
+        <p class="who">of people aged 15 to 29 are unemployed.</p>
+        <blockquote>Education does not automatically become economic participation.</blockquote>
+      </aside>
+    </div>
+
+    <div class="pair mt-l">
+      <article class="card reveal">
+        <span class="icon gold"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-explore"/></svg></span>
+        <h3 class="h h3">Why Adolescence</h3>
+        <p>Adolescence is when a girl decides who she is, what she believes she can do, and which subjects she will keep or drop.</p>
+        <p>Support that arrives in adulthood arrives after those decisions have been made, often by someone else.</p>
+      </article>
+      <article class="card dark reveal" style="background:var(--indigo)">
+        <p class="big">The window to act is now, <span>while she is still choosing.</span></p>
+      </article>
+    </div>
+
+    <h3 class="h h3 sub reveal">Why a Book</h3>
+    <div class="grid g4 mt-m">
+      <article class="card reveal"><span class="num cream" style="background:var(--cream);color:var(--brick)">1</span><h3 class="h" style="font-size:19px">It scales.</h3><p>A book travels across schools, provinces and borders at low cost per girl.</p></article>
+      <article class="card reveal"><span class="num" style="background:var(--cream);color:var(--brick)">2</span><h3 class="h" style="font-size:19px">It needs nothing else.</h3><p>No electricity, no internet, no trained facilitator.</p></article>
+      <article class="card reveal"><span class="num" style="background:var(--cream);color:var(--brick)">3</span><h3 class="h" style="font-size:19px">It lasts.</h3><p>One book supports a girl again and again for years, not once.</p></article>
+      <article class="card reveal"><span class="num" style="background:var(--cream);color:var(--brick)">4</span><h3 class="h" style="font-size:19px">It is personal.</h3><p>It carries her name and a letter written for her.</p></article>
+    </div>
+
+    <article class="card free mt-l reveal">
+      <div>
+        <span class="icon coral"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-volunteer_activism"/></svg></span>
+        <h3 class="h h3">Why It Is Free to the Girl</h3>
+        <p class="lead-b" style="margin-top:14px">The girls who need this journal most cannot afford it.</p>
+      </div>
+      <div>
+        <p>If girls or their families had to pay, the journal would reach the girls who need it least.</p>
+        <p>So the model is turned around. An institution or organisation buys in bulk. The girl receives her copy free. Her access depends on her need, never on what her family can spend.</p>
+      </div>
+    </article>
+
+    <div class="card thesis mt-l reveal">
+      <p class="eyebrow">Why Girls with Goals</p>
+      <h2 class="h h2">Because a goal needs a map.</h2>
+      <p>Many girls dream big. What they lack is a clear line between the subjects on their timetable and the careers on the other side.</p>
+      <p class="draw">Girls with Goals draws that line.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. THE BOOK ============ -->
+<section class="sec bg-white" id="the-book" aria-labelledby="book-h">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">The Book</p>
+      <h2 id="book-h" class="h h2">Not a motivational book. A system.</h2>
+      <p class="motto" style="margin-top:4px">See It. Believe It. Plan It. Become It.</p>
+      <p class="lead">It is the journey every page of the journal takes a girl on.</p>
+    </div>
+    <ol class="journey mt-m reveal" aria-label="She sees the careers. She believes she belongs in them. She plans the steps. She becomes the woman she pictured.">
+      <li><b>See It.</b><span>She sees the careers.</span></li>
+      <li><b>Believe It.</b><span>She believes she belongs in them.</span></li>
+      <li><b>Plan It.</b><span>She plans the steps.</span></li>
+      <li><b>Become It.</b><span>She becomes the woman she pictured.</span></li>
+    </ol>
+
+    <div class="what-is mt-l reveal">
+      <div class="art"><img src="./assets/photos/girls-with-goals-book.webp" alt="The Girls with Goals journal cover" width="1122" height="1402" loading="lazy"></div>
+      <div>
+        <p class="eyebrow left">What It Is</p>
+        <p class="big" style="margin-top:14px"><strong>Girls with Goals: A Career Colouring and Confidence Journal for Girls</strong> is a practical, self guided life skills and goal setting system for girls in high school.</p>
+        <p class="lead">It is robust enough to deliver consistent outcomes and flexible enough to be adapted for every country.</p>
+      </div>
+    </div>
+
+    <h3 class="h h3 sub reveal">What It Does for the Girl</h3>
+    <div class="grid g4 mt-m">
+      <article class="card cream reveal"><span class="num white">1</span><h3 class="h" style="font-size:19px">Identity and confidence.</h3><p>She learns who she is and what she is capable of.</p></article>
+      <article class="card cream reveal"><span class="num white">2</span><h3 class="h" style="font-size:19px">Values based decision making.</h3><p>She learns to choose with clarity, not pressure.</p></article>
+      <article class="card cream reveal"><span class="num white">3</span><h3 class="h" style="font-size:19px">Education and career goal setting.</h3><p>She connects her subjects to real careers and sets her own goals.</p></article>
+      <article class="card cream reveal"><span class="num white">4</span><h3 class="h" style="font-size:19px">Planning and resilience.</h3><p>She learns to plan, track her progress and keep going.</p></article>
+    </div>
+
+    <h3 class="h h3 sub reveal">What Is Inside</h3>
+    <div class="grid g2 mt-m inside">
+      <article class="card lilac reveal"><span class="icon white"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-work"/></svg></span><div><h3 class="h" style="font-size:21px">Careers explained plainly.</h3><p>Each career begins with what the person actually does, and which school subjects a girl needs to get there.</p></div></article>
+      <article class="card lilac reveal"><span class="icon white"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-palette"/></svg></span><div><h3 class="h" style="font-size:21px">Colouring pages that build a connection.</h3><p>A girl colours in the engineer, the doctor or the lawyer herself, so she takes part in creating the woman she could become.</p></div></article>
+      <article class="card lilac reveal"><span class="icon white"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-diversity_3"/></svg></span><div><h3 class="h" style="font-size:21px">Representation on every page.</h3><p>Different skin tones, hair, body shapes, faiths and heritage, so no girl turns the page and finds herself missing.</p></div></article>
+      <article class="card lilac reveal"><span class="icon white"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-edit_note"/></svg></span><div><h3 class="h" style="font-size:21px">Challenges and reflection.</h3><p>Easy to follow activities that build confidence and help her set her own goals.</p></div></article>
+    </div>
+
+    <div class="duo mt-l reveal">
+      <div>
+        <h3 class="h h3">Made for Every Country</h3>
+        <p>School subjects are named differently around the world.</p>
+        <p>Each edition of Girls with Goals carries its own country name and its own subject terms.</p>
+        <p>The South African edition, for example, uses South African subject names such as <strong>Life Sciences</strong>.</p>
+        <h3 class="h" style="font-size:20px;margin-top:28px">Who Can Partner With Us</h3>
+        <ul class="chips">
+          <li>Governments and ministries</li>
+          <li>Multilateral and development agencies</li>
+          <li>Foundations and philanthropists</li>
+          <li>Corporate CSI and ESG programmes</li>
+          <li>NGOs, schools and education systems</li>
+          <li>Faith based organisations and values driven networks</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="h h3">Built for Institutions</h3>
+        <p>Each order is printed for the institution that provides it.</p>
+        <p>Your name is on the cover and a personal letter sits inside every copy.</p>
+        <p class="note"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-verified_user"/></svg>It is never generic stock and it is never for resale.</p>
+      </div>
+    </div>
+
+    <div class="cta-line reveal">
+      <p>See the journal, the procurement proposal and the rollout plan for your country.</p>
+      <p><span class="email">Email:</span> <a class="mail" href="mailto:partnerships@ascendgirlsnetwork.com">partnerships@ascendgirlsnetwork.com</a></p>
+      <a class="btn bp" href="#contact" data-enquiry="bulk">Order Girls with Goals in bulk <span class="ar"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow_outward"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. IMPACT AND SDG ALIGNMENT ============ -->
+<section class="sec bg-indigo" id="impact" aria-labelledby="impact-h">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Impact and SDG Alignment</p>
+      <h2 id="impact-h" class="h h2">Impact at scale, measured and reported.</h2>
+    </div>
+
+    <h3 class="h h3 sub reveal">Scaling Vision</h3>
+    <ol class="grid g4 mt-m phase" style="align-items:end">
+      <li class="card dark p1 reveal"><span class="k">1 million girls</span><p>a national rollout</p></li>
+      <li class="card dark p2 reveal"><span class="k">10 million girls</span><p>implementation across many countries</p></li>
+      <li class="card dark p3 reveal"><span class="k">50 million girls</span><p>regional transformation</p></li>
+      <li class="card dark p4 reveal"><span class="k">Every girl who needs it</span><p>a global shift</p></li>
+    </ol>
+    <div class="note-row reveal">
+      <p>Each phase is led with partners, so quality, safeguarding and accountability grow with the numbers.</p>
+      <p class="strong">This is not charity. It is investment in the next generation of workers, leaders and founders.</p>
+    </div>
+
+    <div class="measure reveal">
+      <h3 class="h h3">How We Measure It</h3>
+      <ul>
+        <li><b>01</b><span>Goal completion and planning rates</span></li>
+        <li><b>02</b><span>Self reported confidence and agency</span></li>
+        <li><b>03</b><span>School engagement indicators</span></li>
+        <li><b>04</b><span>Educator and community feedback</span></li>
+      </ul>
+      <p class="foot">Annual impact reporting accompanies every rollout.</p>
+    </div>
+
+    <div class="head mt-l reveal" style="margin-top:72px">
+      <h3 class="h h2">Sustainable Development Goals</h3>
+    </div>
+    <div class="grid g3 mt-m sdg">
+      <article class="card reveal" style="color:var(--ink)"><span class="sdg-tag t4">SDG 4</span><h4 class="h h3">Quality Education</h4><p style="margin-top:10px">Girls understand what they are studying and why, and stay engaged in school.</p></article>
+      <article class="card reveal" style="color:var(--ink)"><span class="sdg-tag t5">SDG 5</span><h4 class="h h3">Gender Equality</h4><p style="margin-top:10px">Girls build the confidence, independence and income pathways to lead their own lives.</p></article>
+      <article class="card reveal" style="color:var(--ink)"><span class="sdg-tag t8">SDG 8</span><h4 class="h h3">Decent Work and Economic Growth</h4><p style="margin-top:10px">Girls move from school to work with a plan, not by chance.</p></article>
+    </div>
+    <p class="center-note reveal">Our model is designed for measurable, auditable and reportable SDG contribution that your institution can include in its own reporting.</p>
+  </div>
+</section>
+
+<!-- ============ 5. GOVERNANCE AND SAFEGUARDING ============ -->
+<section class="sec bg-lilac gov" id="governance" aria-labelledby="gov-h">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Governance and Safeguarding</p>
+      <h2 id="gov-h" class="h h2">Impact without integrity is failure.</h2>
+    </div>
+    <div class="grid g4 mt-l">
+      <article class="card reveal"><span class="icon coral"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-balance"/></svg></span><h3 class="h">Ethical programme design</h3></article>
+      <article class="card reveal"><span class="icon gold"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shield"/></svg></span><h3 class="h">Child safeguarding and protection built into every distribution</h3></article>
+      <article class="card reveal"><span class="icon lilac"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-handshake"/></svg></span><h3 class="h">Responsible, vetted partnerships</h3></article>
+      <article class="card reveal"><span class="icon coral"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-visibility"/></svg></span><h3 class="h">Transparent governance and oversight</h3></article>
+    </div>
+    <p class="banner reveal">Safeguarding grows stronger as we scale, never weaker.</p>
+  </div>
+</section>
+
+<!-- ============ 6. PARTNERS AND BULK ORDERS ============ -->
+<section class="sec bg-cream" id="partners" aria-labelledby="partners-h">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Partners and Bulk Orders</p>
+      <h2 id="partners-h" class="h h2">Put your name behind the girls who will lead.</h2>
+    </div>
+
+    <h3 class="h h3 sub reveal">Who Partners With Us</h3>
+    <ul class="chips mt-m reveal">
+      <li>Governments and ministries</li>
+      <li>Multilateral and development agencies</li>
+      <li>Foundations and philanthropists</li>
+      <li>Corporate CSI and ESG programmes</li>
+      <li>NGOs, schools and education systems</li>
+      <li>Faith based organisations and values driven networks</li>
+    </ul>
+
+    <h3 class="h h3 sub reveal">How a Bulk Order Works</h3>
+    <ol class="grid g4 mt-m steps">
+      <li class="card reveal"><span class="num coral">1</span><h3>Tell us how many girls you want to reach, and where.</h3></li>
+      <li class="card reveal"><span class="num gold">2</span><h3>We place your institution’s name on the cover and prepare the personal letter inside.</h3></li>
+      <li class="card reveal"><span class="num lilac">3</span><h3>We print and deliver the journals to the girls, or to the partner you nominate.</h3></li>
+      <li class="card reveal"><span class="num coral">4</span><h3>Every girl receives her copy free.</h3></li>
+    </ol>
+
+    <div class="receive mt-l">
+      <article class="card reveal">
+        <h3 class="h h3">What Partners Receive</h3>
+        <ul class="check" style="margin-top:18px">
+          <li><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Your name on every cover and a personal letter in every copy</li>
+          <li><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>A structured rollout plan for your context</li>
+          <li><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Impact measurement and reporting</li>
+          <li><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Alignment with SDGs, ESG frameworks and national priorities</li>
+        </ul>
+      </article>
+      <article class="card dark reveal" style="background:var(--indigo)">
+        <h3 class="h h3">Individuals and Communities</h3>
+        <p class="lead-b">You do not need to run a programme to change a life.</p>
+        <p>Individuals, families and faith communities can sponsor books for girls through our trusted partners, with safeguarding and accountability at the core.</p>
+      </article>
+    </div>
+
+    <div class="cta-line reveal">
+      <p>Pricing and rollout plans are shared through direct conversation.</p>
+      <p><span class="email">Email:</span> <a class="mail" href="mailto:partnerships@ascendgirlsnetwork.com">partnerships@ascendgirlsnetwork.com</a></p>
+      <a class="btn bi" href="#contact" data-enquiry="bulk">Order Girls with Goals in bulk <span class="ar"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow_outward"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. PAST EVENTS + 8. REPORT ============ -->
+<section class="sec bg-white rep" id="past-events" aria-labelledby="events-h">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Past Events</p>
+      <h2 id="events-h" class="h h2">We show up for girls.</h2>
+      <p class="lead">Each event has its own report and a gallery.</p>
+    </div>
+
+    <article class="event reveal" aria-labelledby="ev1-h">
+      <div class="date" aria-hidden="true"><b>20</b><span>Oct 2026</span></div>
+      <div>
+        <h3 id="ev1-h" class="h">Career Expo — 20 October 2026</h3>
+        <p class="loc"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Johannesburg%20Expo%20Centre" target="_blank" rel="noopener">Expo Centre Johannesburg, Hall 1</a></p>
+        <p class="t">More than <strong>500 girls</strong>, careers in mining, medicine and law, and four partners who made the day possible.</p>
+        <ul class="ev-links">
+          <li><a href="#report"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-description"/></svg>Report</a></li>
+          <li><a href="#gallery"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo_library"/></svg>Gallery</a></li>
+          <li><a href="#supporters"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-favorite"/></svg>Our Supporters</a></li>
+        </ul>
+      </div>
+    </article>
+    <p class="more reveal">More events will be added here.</p>
+
+    <div id="report" class="head reveal" style="margin-top:96px">
+      <p class="eyebrow">Career Expo 2026</p>
+      <h2 class="h h2">Career Expo 2026: Report</h2>
+      <p class="meta"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar_month"/></svg><time datetime="2026-10-20">Tuesday, 20 October 2026</time> | Expo Centre Johannesburg, Hall 1</p>
+    </div>
+
+    <div class="glance mt-l reveal">
+      <h3 class="h h3">The Day at a Glance</h3>
+      <ul>
+        <li><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-groups"/></svg>More than 500 girls in Grade 10 and 11</li>
+        <li><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-directions_bus"/></svg>More than 100 girls from Rustenburg, travelling in by bus</li>
+        <li><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-school"/></svg>Girls from underserved no fee schools in Johannesburg and Rustenburg</li>
+        <li><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-work"/></svg>Careers in mining, medicine and law, presented by people who work in them</li>
+        <li><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-storefront"/></svg>Colleges and employers on the expo floor</li>
+        <li><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-record_voice_over"/></svg>Speakers close to the girls’ own age</li>
+        <li><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-health_and_safety"/></svg>Security and an ambulance on site, and event liability insurance in place</li>
+        <li><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-money_off"/></svg>No cost to any girl or her family</li>
+      </ul>
+    </div>
+
+    <div class="grid g2 mt-l">
+      <article class="card cream reveal">
+        <h3 class="h h3">Summary</h3>
+        <p>On Tuesday, 20 October 2026, Ascend Girls Network held its first Career Expo.</p>
+        <p>More than 500 girls from underserved schools in Johannesburg and Rustenburg spent the day meeting people who work in careers they had never seen up close.</p>
+        <p>Sponsors paid for the day and we arranged the buses, so no girl paid anything to attend.</p>
+        <p class="hl">For many of them, it was the first time they sat across from a person doing the career they had only heard about.</p>
+      </article>
+      <article class="card lilac reveal">
+        <h3 class="h h3">Why We Held the Expo</h3>
+        <p>The girls who came are in Grade 10 and 11, at schools that serve families who have very little.</p>
+        <p>They go to school every day, but many cannot say why they are studying mathematics or physical science.</p>
+        <p>Life Orientation is the only formal career guidance most of them receive.</p>
+        <p>A girl who cannot see where her subjects lead is more likely to drop out.</p>
+        <p class="hl">The Expo exists to show her where they can take her.</p>
+      </article>
+    </div>
+
+    <h3 class="h h3 sub reveal">What the Girls Experienced</h3>
+    <div class="grid g5 mt-m exp">
+      <article class="card cream reveal"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-engineering"/></svg><h4>Careers Up Close</h4><p>The girls met people working in mining, medicine and law, asked how they got there, and heard which subjects opened the door.</p></article>
+      <article class="card cream reveal"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-campaign"/></svg><h4>Speakers Close to Their Own Age</h4><p>The founders of Tol Thema and Umkho AI, both born after the year 2000, told the girls how they built something real.</p></article>
+      <article class="card cream reveal"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-school"/></svg><h4>Colleges on the Expo Floor</h4><p>Colleges explained what to study and how to apply.</p></article>
+      <article class="card cream reveal"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-gavel"/></svg><h4>Professionals at Their Stands</h4><p>Partners brought their own people to speak with the girls.</p><p style="margin-top:8px">At the Lusenga Inc stand, the girls met attorneys, conveyancers and notaries and asked about the work.</p></article>
+      <article class="card cream reveal"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-emoji_events"/></svg><h4>Competitions and Prizes</h4><p>The girls took part in competitions, and many went home with prizes.</p></article>
+    </div>
+
+    <div class="words reveal">
+      <p class="eyebrow">In Their Words</p>
+      <blockquote>“A girl told us she never knew that mining careers were also for women until she saw them.”</blockquote>
+      <blockquote>“Another girl told us she was inspired when she listened to the founder and CEO of Umkho AI, who she said is only 22 years old.”</blockquote>
+      <p>The first girl learnt that a career was open to her. The second saw someone her own age doing something she could aim for.</p>
+    </div>
+
+    <div class="grid g2 mt-l">
+      <article class="card reveal">
+        <h3 class="h h3">Who Was There</h3>
+        <p>Girls and teachers from schools across Johannesburg and Rustenburg.</p>
+        <h3 class="h h3" style="margin-top:28px">Our Partners</h3>
+        <p>The Expo was made possible by:</p>
+        <ul class="tiers">
+          <li><b>Sibanye-Stillwater</b><span class="badge b-plat">Platinum Sponsor</span></li>
+          <li><b>Harmony Gold</b><span class="badge b-gold">Gold Sponsor</span></li>
+          <li><b>Lenmed</b><span class="badge b-silver">Silver Sponsor</span></li>
+          <li><b>Lusenga Inc</b><span class="badge b-comm">Community Partner</span></li>
+        </ul>
+        <p class="hl" style="margin-top:18px">Thank you for believing in these girls.</p>
+      </article>
+      <article class="card next reveal">
+        <h3 class="h h3">What Comes Next</h3>
+        <p>We are already organising the next Career Expo, planned for between <strong>February and the end of April 2027</strong>.</p>
+        <p>The programme will be built around career sessions, each one brought to the girls by a sponsor whose own people tell them what their careers are, what they studied and how they got there.</p>
+        <p>If you would like to sponsor, exhibit or speak at the next Expo:</p>
+        <p><span class="email">Email:</span> <a class="mail" href="mailto:partnerships@ascendgirlsnetwork.com">partnerships@ascendgirlsnetwork.com</a></p>
+      </article>
+    </div>
+
+    <p class="closing reveal">Thank you to the girls, their teachers and principals, our sponsors and partners, and everyone who stood with us on the day.</p>
+  </div>
+</section>
+
+<!-- ============ 9. GALLERY ============ -->
+<section class="sec bg-cream" id="gallery" aria-labelledby="gallery-h">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Career Expo 2026: Gallery</p>
+      <h2 id="gallery-h" class="h h2">The day in pictures.</h2>
+      <p class="lead">More than 500 girls, one hall, one day that put their futures in front of them.</p>
+    </div>
+    <!-- Replace each .ph placeholder with the event photograph: <img src="./assets/gallery/..." alt="who, where, what"> -->
+    <ol class="albums mt-l">
+      <li class="album wide reveal"><div class="ph" aria-hidden="true"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo_camera"/></svg></div><div class="txt"><h3>1. Arrival</h3><p>Girls arriving and registering.</p></div></li>
+      <li class="album wide reveal"><div class="ph" aria-hidden="true"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo_camera"/></svg></div><div class="txt"><h3>2. On Stage</h3><p>Speakers, the founders of Tol Thema and Umkho AI, and the programme.</p></div></li>
+      <li class="album reveal"><div class="ph" aria-hidden="true"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo_camera"/></svg></div><div class="txt"><h3>3. The Expo Floor</h3><p>Colleges and employers talking to the girls.</p></div></li>
+      <li class="album reveal"><div class="ph" aria-hidden="true"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo_camera"/></svg></div><div class="txt"><h3>4. Our Partners at Their Stands</h3><p>Sibanye-Stillwater, Harmony Gold, Lenmed and Lusenga Inc with the girls.</p></div></li>
+      <li class="album reveal"><div class="ph" aria-hidden="true"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo_camera"/></svg></div><div class="txt"><h3>5. The Girls</h3><p>Moments of learning, laughing and winning prizes.</p></div></li>
+    </ol>
+    <p class="gal-foot reveal">Photographs taken at the Career Expo, <strong>20 October 2026</strong>, Expo Centre Johannesburg.</p>
+  </div>
+</section>
+
+<!-- ============ 10. OUR SUPPORTERS ============ -->
+<section class="sec bg-lilac" id="supporters" aria-labelledby="sup-h">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Career Expo 2026: Our Supporters</p>
+      <h2 id="sup-h" class="h h2">The people and companies who made the day possible.</h2>
+      <p class="lead">These four partners stood with 500 girls on 20 October 2026. Every girl attended at no cost, because they paid for the day.</p>
+    </div>
+    <div class="grid g2 mt-l sup">
+      <article class="card reveal">
+        <div class="top"><span class="logo-box"><img src="./assets/sponsors/sibanye-stillwater.png" alt="Sibanye-Stillwater" width="2000" height="781" loading="lazy"></span><span class="badge b-plat">Platinum Sponsor</span></div>
+        <h3 class="h">Sibanye-Stillwater</h3>
+        <p>Your support is the reason more than 100 girls from Rustenburg were in the room.</p>
+        <p>Thank you for putting mining careers in front of girls who live around your operations.</p>
+      </article>
+      <article class="card reveal">
+        <div class="top"><span class="logo-box"><img src="./assets/sponsors/harmony.svg" alt="Harmony Gold" width="200" height="70" loading="lazy"></span><span class="badge b-gold">Gold Sponsor</span></div>
+        <h3 class="h">Harmony Gold</h3>
+        <p>Thank you for backing the day, and for showing the girls that mining is a career for women too.</p>
+      </article>
+      <article class="card reveal">
+        <div class="top"><span class="logo-box"><img src="./assets/sponsors/lenmed.png" alt="Lenmed" width="320" height="90" loading="lazy"></span><span class="badge b-silver">Silver Sponsor</span></div>
+        <h3 class="h">Lenmed</h3>
+        <p>Thank you for bringing your own people to speak with the girls and for putting careers in healthcare in front of them.</p>
+      </article>
+      <article class="card reveal">
+        <div class="top"><span class="logo-box"><span class="wordmark">Lusenga <span>Inc</span></span></span><span class="badge b-comm">Community Partner</span></div>
+        <h3 class="h">Lusenga Inc</h3>
+        <p>A girl who has never been inside a law firm cannot picture working in one.</p>
+        <p>Lusenga Inc put the profession in front of her, with its own stand, its own people and a banner of its legal practice areas.</p>
+      </article>
+    </div>
+    <div class="thanks reveal">
+      <b>Also Thank You To</b>
+      <p>The schools, principals and teachers who trusted us with their girls, and the speakers who gave their time.</p>
+    </div>
+
+    <div class="head reveal" style="margin-top:72px">
+      <h3 class="h h3">Become a Supporter</h3>
+      <p class="lead">There are four ways to stand with the girls who come next:</p>
+    </div>
+    <ol class="grid g4 mt-m ways">
+      <li class="card reveal"><span class="k">01</span><h3>Sponsor a career session</h3></li>
+      <li class="card reveal"><span class="k">02</span><h3>Exhibit and meet the girls</h3></li>
+      <li class="card reveal"><span class="k">03</span><h3>Speak at the Expo</h3></li>
+      <li class="card reveal"><span class="k">04</span><h3>Provide Girls with Goals journals</h3></li>
+    </ol>
+    <p class="center-note reveal"><span class="email">Email:</span> <a class="mail" href="mailto:partnerships@ascendgirlsnetwork.com">partnerships@ascendgirlsnetwork.com</a></p>
+  </div>
+</section>
+
+<!-- ============ 11. CONTACT ============ -->
+<section class="sec bg-cream" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-h" class="h h2">Let us put Girls with Goals in the hands of girls who need it.</h2>
+      <p class="lead">Whether you represent a government, an agency, a foundation, a company or a community, we welcome a direct conversation about bulk orders, national distribution partnerships and strategic collaboration.</p>
+    </div>
+
+    <div class="contact mt-l">
+      <div class="card reveal">
+        <h3 class="h h3" style="margin-bottom:24px">Email</h3>
+        <ul class="desk">
+          <li><span class="icon coral"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-menu_book"/></svg></span><div><small>Bulk Orders, Partnerships and Girls with Goals</small><b><a class="mail" href="mailto:partnerships@ascendgirlsnetwork.com">partnerships@ascendgirlsnetwork.com</a></b></div></li>
+          <li><span class="icon gold"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-event"/></svg></span><div><small>Events, Sponsorship and Attendance</small><b><a class="mail" href="mailto:events@ascendgirlsnetwork.com">events@ascendgirlsnetwork.com</a></b></div></li>
+          <li><span class="icon lilac"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-location_on"/></svg></span><div><small>Based In</small><b>Johannesburg, South Africa</b></div></li>
+        </ul>
+      </div>
+
+      <div class="form reveal" id="c-form">
+        <form id="contact-form" novalidate>
+          <p hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <div class="fields">
+            <div class="field"><label for="f-name">Full name <span class="req">*</span></label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="f-org">Organisation</label><input id="f-org" name="organisation" type="text" autocomplete="organization"></div>
+            <div class="field"><label for="f-email">Email address <span class="req">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="f-country">Country</label><input id="f-country" name="country" type="text" autocomplete="country-name"></div>
+            <div class="field"><label for="f-about">I am enquiring about: <span class="req">*</span></label>
+              <select id="f-about" name="about" required>
+                <option value="">Choose one…</option>
+                <option value="bulk">Bulk purchase of Girls with Goals</option>
+                <option value="partnership">Partnership or sponsorship</option>
+                <option value="events">Events</option>
+                <option value="other">Something else</option>
+              </select>
+              <span class="hint" id="f-route"></span>
+            </div>
+            <div class="field"><label for="f-girls">Number of girls you would like to reach</label><input id="f-girls" name="quantity" type="number" min="1" step="1" inputmode="numeric"></div>
+            <div class="field full"><label for="f-msg">Message</label><textarea id="f-msg" name="message"></textarea></div>
+          </div>
+          <div class="actions">
+            <button class="btn bp" type="submit" id="send-btn"><span id="send-label">Send message</span> <span class="ar"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow_outward"/></svg></span></button>
+            <p id="send-note">Enquiries about books and partnerships go to partnerships@ascendgirlsnetwork.com. Enquiries about events go to events@ascendgirlsnetwork.com.</p>
+          </div>
+        </form>
+        <div class="done" role="status">
+          <span class="icon coral"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mark_email_read"/></svg></span>
+          <h3 class="h h3">Thank you, your message has been sent</h3>
+          <p>It has gone to <a class="mail" id="done-to"></a>. We’ll reply to the email address you gave us.</p>
+          <button class="btn bw sm" type="button" id="edit-btn">Send another message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ 12. FOOTER ============ -->
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <span class="logo-chip"><img src="./assets/72f354eb3592d0125e2610cb80c3db66.png" alt="Ascend Girls Network" width="196" height="47" loading="lazy"></span>
+      <p style="margin-top:18px">See It. Believe It. Plan It. Become It.</p>
+      <p style="margin-top:8px">Johannesburg, South Africa</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#why">Why Girls with Goals</a><a href="#the-book">The Book</a>
+        <a href="#impact">Impact &amp; SDGs</a><a href="#governance">Governance</a>
+        <a href="#partners">Partners &amp; Bulk Orders</a><a href="#past-events">Past Events</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="foot-mail">
+      <h4>Email</h4>
+      <div><small>Bulk Orders, Partnerships and Girls with Goals</small><a href="mailto:partnerships@ascendgirlsnetwork.com">partnerships@ascendgirlsnetwork.com</a></div>
+      <div><small>Events, Sponsorship and Attendance</small><a href="mailto:events@ascendgirlsnetwork.com">events@ascendgirlsnetwork.com</a></div>
+    </div>
+  </div>
+  <p class="legal">Ascend Girls Network (Pty) Ltd | www.ascendgirlsnetwork.com</p>
+</footer>
+
+<script>
+(function () {
+  // Mobile menu
+  var btn = document.querySelector('.menu-btn'), nav = document.getElementById('nav');
+  function setMenu(open) {
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    btn.querySelector('use').setAttribute('href', open ? '#i-close' : '#i-menu');
+  }
+  btn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+  nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // Reveal on scroll
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Contact form: books and partnerships go to partnerships@, events go to events@ (send.php holds the addresses)
+  var INBOX = { bulk: 'partnerships', partnership: 'partnerships', events: 'events', other: 'partnerships' };
+  var ADDRESS = { partnerships: 'partnerships@ascendgirlsnetwork.com', events: 'events@ascendgirlsnetwork.com' };
+  function el(id) { return document.getElementById(id); }
+  var form = el('contact-form'), wrap = el('c-form'), about = el('f-about');
+  function route() { var i = INBOX[about.value]; el('f-route').textContent = i ? 'This goes to ' + ADDRESS[i] : ''; }
+  about.addEventListener('change', route);
+
+  // Buttons such as "Order Girls with Goals in bulk" choose the enquiry type on their way to the form
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-enquiry]');
+    if (!t) return;
+    about.value = t.getAttribute('data-enquiry');
+    wrap.classList.remove('sent');
+    route();
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    var f = form.elements, inbox = INBOX[about.value], data = new URLSearchParams();
+    data.append('inbox', inbox);
+    data.append('bot-field', f['bot-field'].value);
+    data.append('offer', about.options[about.selectedIndex].text);
+    ['name', 'organisation', 'email', 'quantity', 'country', 'message'].forEach(function (k) { data.append(k, f[k].value.trim()); });
+
+    var send = el('send-btn'), note = el('send-note'), noteText = note.textContent;
+    send.disabled = true; el('send-label').textContent = 'Sending…'; note.classList.remove('err');
+    fetch('send.php', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' }, body: data.toString() })
+      .then(function (r) { return r.json().catch(function () { return { ok: false }; }).then(function (j) { if (!r.ok || !j.ok) throw new Error(j.error || r.status); }); })
+      .then(function () {
+        el('done-to').textContent = ADDRESS[inbox];
+        el('done-to').href = 'mailto:' + ADDRESS[inbox];
+        wrap.classList.add('sent');
+        form.reset(); route();
+      })
+      .catch(function (err) {
+        var reason = err && err.message && !/^\d+$/.test(err.message) && err.message !== 'Failed to fetch' ? err.message + '. ' : '';
+        if (!reason) {
+          // No mail server here (e.g. a static host): hand the enquiry to the visitor's email app instead
+          var lines = ['Enquiring about: ' + data.get('offer')];
+          [['Name', 'name'], ['Organisation', 'organisation'], ['Email', 'email'], ['Country', 'country'], ['Number of girls to reach', 'quantity']].forEach(function (p) { if (data.get(p[1])) lines.push(p[0] + ': ' + data.get(p[1])); });
+          if (data.get('message')) lines.push('', data.get('message'));
+          location.href = 'mailto:' + ADDRESS[inbox] + '?subject=' + encodeURIComponent('Website enquiry: ' + data.get('offer')) + '&body=' + encodeURIComponent(lines.join('\n'));
+          note.textContent = 'Your email app has opened with your message to ' + ADDRESS[inbox] + '. Just press send.';
+          return;
+        }
+        note.textContent = 'Sorry, your message couldn’t be sent. ' + reason + 'Please try again, or email ' + ADDRESS[inbox] + ' directly.';
+        note.classList.add('err');
+        setTimeout(function () { note.textContent = noteText; note.classList.remove('err'); }, 12000);
+      })
+      .then(function () { send.disabled = false; el('send-label').textContent = 'Send message'; });
+  });
+  el('edit-btn').addEventListener('click', function () { wrap.classList.remove('sent'); el('f-name').focus(); });
+})();
+</script>
+</body>
+</html>
