@@ -16,9 +16,7 @@
 <meta property="og:description" content="Institutions buy it. She receives it free. Girls with Goals serves girls in every country.">
 <meta property="og:image" content="https://www.ascendgirlsnetwork.com/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Caveat:wght@600;700&display=swap">
+<link rel="stylesheet" href="./assets/fonts/fonts.css">
 <style>
 :root{
   --cream:#FFF6EA; --white:#FFFFFF; --ink:#231A3A; --muted:#5B5170; --muted2:#4A405E;
@@ -27,7 +25,7 @@
   --g-coral:linear-gradient(135deg,#F0643A 0%,#E14E2D 45%,#C23E1D 100%);
   --g-indigo:linear-gradient(150deg,#3B2470 0%,#2A1B4D 55%,#1C1136 100%);
   --shadow:0 24px 48px -32px rgba(35,26,58,.35);
-  --pad:clamp(20px,5vw,48px);
+  --pad:clamp(16px,5.5vw,80px); --max:1280px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:92px}
@@ -44,7 +42,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .skip:focus{top:16px}
 
 /* Layout */
-.wrap{max-width:1104px;margin:0 auto}
+.wrap{max-width:var(--max);margin:0 auto}
 .sec{position:relative;padding:112px var(--pad)}
 .bg-cream{background:var(--cream)}.bg-white{background:#fff}.bg-lilac{background:var(--lilac-bg)}
 .bg-indigo{background:var(--indigo);color:#fff}
@@ -108,12 +106,13 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 /* Header */
 .site-head{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 4px 24px rgba(35,26,58,.06)}
-.head-in{max-width:1180px;margin:0 auto;height:84px;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.head-in{max-width:calc(var(--max) + 2*var(--pad));margin:0 auto;height:84px;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;gap:20px}
 .logo img{width:184px;height:auto}
 .nav{display:flex;align-items:center;gap:24px}
 .nav ul{display:flex;gap:20px}
 .nav ul a{font-size:14.5px;font-weight:500;color:var(--muted2);text-decoration:none;white-space:nowrap;padding:6px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
 .nav ul a:hover{color:var(--brick);border-color:var(--gold)}
+.nav ul a.active{color:var(--brick);border-color:var(--coral)}
 .nav .btn{min-height:48px;font-size:15px;padding:0 7px 0 22px;color:#fff;border:0}
 .nav .btn .ar{width:34px;height:34px}
 .menu-btn{display:none;width:48px;height:48px;border-radius:50%;border:2px solid var(--ink);background:#fff;cursor:pointer;align-items:center;justify-content:center}
@@ -126,25 +125,46 @@ button,input,select,textarea{font:inherit;color:inherit}
 .hero h1 .map{position:relative;color:var(--brick);display:inline-block}
 .hero h1 .map svg{position:absolute;left:0;bottom:-8px;width:100%;height:14px}
 .hero .lead{max-width:680px;margin:26px auto 0}
-.motto{font-family:'Space Grotesk',sans-serif;font-style:italic;font-weight:700;font-size:clamp(22px,2.4vw,30px);color:var(--brick);letter-spacing:.02em;margin-top:28px}
+.motto{font-family:'Caveat','Comic Sans MS',cursive;font-style:normal;font-weight:700;font-size:clamp(28px,2.8vw,36px);line-height:1.15;color:var(--brick);letter-spacing:0;margin-top:28px}
 .hero .motto{font-family:'Caveat','Comic Sans MS',cursive;font-style:normal;font-weight:700;font-size:clamp(30px,3.2vw,40px);letter-spacing:0;line-height:1.15}
 .hero .btns{margin-top:36px}
 .global{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-size:15px;color:var(--muted)}
 .global .ms{color:var(--indigo);font-size:20px}
-.feature{margin:64px auto 0;max-width:1024px;background:#fff;border-radius:32px;padding:40px;display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:center;text-align:left;box-shadow:0 40px 70px -46px rgba(35,26,58,.45)}
+.shows{position:relative;margin:8px calc(-1 * var(--pad)) 0;padding:56px 0;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
+.shows-track{display:flex;gap:22px;width:max-content;animation:shows 60s linear infinite}
+.shows:hover .shows-track{animation-play-state:paused}
+@keyframes shows{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.shot-card{flex-shrink:0;height:270px;aspect-ratio:3/4;border-radius:24px;overflow:hidden;border:6px solid #fff;background:#FBE3CF;box-shadow:0 18px 36px -20px rgba(35,26,58,.30),0 4px 12px -6px rgba(35,26,58,.10);transform:rotate(-2deg)}
+.shot-card:nth-child(even){transform:rotate(3deg) translateY(10px)}
+.shot-card img{width:100%;height:100%;object-fit:cover}
+.shot-card.cut{background:var(--gold)}
+.shot-card.cut img{object-position:center top}
+.shot-card.book{background:var(--gold-soft)}
+.shot-card.book img{object-fit:contain;padding:18px}
+@media (max-width:760px){.shows{padding:40px 0}.shot-card{height:200px;border-width:4px;border-radius:18px}.shows-track{gap:14px}}
+@media (prefers-reduced-motion:reduce){.shows-track{animation:none}}
+.feature{margin:24px auto 0;max-width:var(--max);background:#fff;border-radius:36px;padding:48px 56px 48px 40px;display:grid;grid-template-columns:6fr 6fr;gap:48px;align-items:center;text-align:left;box-shadow:0 40px 70px -46px rgba(35,26,58,.45);position:relative;overflow:hidden}
+.feature::after{content:"";position:absolute;right:-90px;top:-90px;width:240px;height:240px;border-radius:50%;background:var(--lilac-bg);pointer-events:none}
 .pill{display:inline-flex;align-items:center;gap:8px;background:var(--coral-soft);color:var(--brick);border-radius:999px;padding:7px 16px;font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
 .pill .ms{font-size:18px}
-.feature h2{font-size:clamp(24px,2.4vw,30px);margin-top:20px}
-.feature p.t{margin-top:14px;color:var(--muted2)}
-.minis{margin-top:24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.minis li{background:var(--cream);border-radius:16px;padding:14px 16px}
-.minis b{display:block;font-family:'Space Grotesk',sans-serif;font-size:19px;color:var(--brick)}
-.minis span{font-size:13px;line-height:1.35;color:var(--muted2)}
-.feature-img{position:relative;border-radius:22px;overflow:hidden;background:var(--gold-soft);aspect-ratio:4/5}
-.feature-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
-.feature-img .tagline{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(42,27,77,.92);color:#fff;border-radius:16px;padding:14px 18px}
-.feature-img .tagline b{display:block;font-family:'Space Grotesk',sans-serif;color:var(--gold);font-size:15px;letter-spacing:.04em;text-transform:uppercase}
-.feature-img .tagline span{font-size:13.5px;color:#E4DDF3}
+.model-art{position:relative;z-index:1;align-self:stretch;min-height:380px;border-radius:28px;overflow:hidden;background:linear-gradient(160deg,#FDE6DC 0%,#FEEFD6 100%);display:flex;align-items:center;justify-content:center}
+.model-art img{width:100%;height:100%;object-fit:contain;transform:scale(1.16)}
+.model-copy{position:relative;z-index:1}
+.model-steps{margin-top:26px;display:flex;flex-direction:column;gap:20px;position:relative}
+.model-steps::before{content:"";position:absolute;left:23px;top:30px;bottom:30px;border-left:2px dashed #D9A897}
+.model-steps li{display:flex;align-items:center;gap:18px;position:relative}
+.model-steps .dot{flex-shrink:0;width:48px;height:48px;border-radius:50%;background:var(--coral-soft);color:var(--brick);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 6px #fff}
+.model-steps .dot.gold{background:var(--gold-soft);color:var(--gold-deep)}
+.model-steps .dot.ink{background:var(--indigo);color:var(--gold)}
+.model-steps b{font-size:clamp(20px,2vw,26px);line-height:1.2}
+.model-steps li:last-child b{color:var(--brick)}
+.feature p.t{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted2)}
+.minis{margin-top:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.minis li{padding:2px 18px}
+.minis li:first-child{padding-left:0}
+.minis li+li{border-left:2px dashed var(--line)}
+.minis b{display:block;font-family:'Space Grotesk',sans-serif;font-size:22px;color:var(--brick)}
+.minis span{display:block;margin-top:4px;font-size:13px;line-height:1.4;color:var(--muted2)}
 
 /* Scale */
 .stat-big{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(48px,5vw,64px);line-height:1;letter-spacing:-.03em}
@@ -164,9 +184,10 @@ button,input,select,textarea{font:inherit;color:inherit}
 .does .shot img{width:100%;height:100%;object-fit:cover}
 
 /* Model */
-.quote-card{background:var(--indigo-2);border-radius:32px;padding:56px 48px;box-shadow:0 40px 70px -40px rgba(0,0,0,.6)}
+.quote-card{background:var(--indigo-2);border-radius:32px;padding:56px 48px;box-shadow:0 18px 36px -24px rgba(0,0,0,.35)}
 .quote-card .qm{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:72px;line-height:.6;color:var(--coral);height:34px;display:block}
-.quote-card p{font-size:clamp(26px,3vw,38px);margin-top:18px;max-width:900px}
+.quote-card{width:100%}
+.quote-card p{font-size:clamp(26px,3vw,38px);margin-top:18px;max-width:none;text-wrap:pretty}
 .quote-card p span{color:var(--gold)}
 .inst .card h3{font-family:"Outfit",sans-serif;font-weight:500;letter-spacing:0;font-size:17px;line-height:1.45;margin-bottom:0}
 
@@ -283,8 +304,9 @@ button,input,select,textarea{font:inherit;color:inherit}
 .exp .ms{color:var(--brick);font-size:26px;margin-bottom:14px}
 .words{max-width:900px;margin:72px auto 0;background:var(--indigo);color:#fff;border-radius:32px;padding:48px;text-align:center}
 .words .eyebrow{color:var(--gold)}
-.words blockquote{margin-top:22px;font-family:'Space Grotesk',sans-serif;font-style:italic;font-weight:600;font-size:clamp(19px,2vw,24px);line-height:1.45}
+.words blockquote{margin-top:22px;font-family:'Caveat','Comic Sans MS',cursive;font-style:normal;font-weight:700;font-size:clamp(26px,2.6vw,32px);line-height:1.3}
 .words blockquote+blockquote{margin-top:16px}
+.q-mark{color:var(--gold);background:linear-gradient(transparent 68%,rgba(245,173,9,.28) 68%);padding:0 2px;border-radius:2px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .words p{margin-top:22px;color:#D9D1EC}
 .tiers{display:flex;flex-direction:column;gap:10px;margin-top:14px}
 .tiers li{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:var(--cream);border-radius:14px;padding:12px 16px}
@@ -298,12 +320,12 @@ button,input,select,textarea{font:inherit;color:inherit}
 .albums{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px}
 .album{grid-column:span 2;background:#fff;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
 .album.wide{grid-column:span 3}
-.album .ph{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:rgba(42,27,77,.3);background:repeating-linear-gradient(135deg,rgba(255,255,255,.45) 0 14px,transparent 14px 28px),var(--lilac)}
-.album.wide .ph{aspect-ratio:16/9}
-.album:nth-child(2) .ph{background-color:var(--gold-soft)}
-.album:nth-child(3) .ph{background-color:var(--coral-soft)}
-.album:nth-child(4) .ph{background-color:#FFE7A8}
-.album .ph .ms{font-size:40px}
+.album .ph{aspect-ratio:4/3;overflow:hidden;background:var(--lilac)}
+.album.wide .ph{aspect-ratio:16/10}
+.album .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.album:hover .ph img{transform:scale(1.04)}
+.album .ph.two{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+@media (prefers-reduced-motion:reduce){.album .ph img{transition:none}.album:hover .ph img{transform:none}}
 .album .txt{padding:18px 20px 22px}
 .album h3{font-family:'Space Grotesk',sans-serif;font-size:17px}
 .album p{margin-top:4px;font-size:14.5px;color:var(--muted2)}
@@ -315,11 +337,9 @@ button,input,select,textarea{font:inherit;color:inherit}
 .sup .logo-box{height:56px;display:flex;align-items:center}
 .sup .logo-box img{max-height:56px;max-width:200px;width:auto;object-fit:contain}
 .sup .logo-box img[src$=".svg"]{height:48px;width:180px}
-.wordmark{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;letter-spacing:-.02em;color:#1F2A44}
-.wordmark span{font-weight:500;color:#9A7B3E}
 .sup .card h3{font-size:24px}
 .sup .card p+p{margin-top:10px}
-.thanks{max-width:760px;margin:32px auto 0;background:#fff;border-radius:22px;padding:24px 28px;text-align:center;box-shadow:var(--shadow)}
+.thanks{max-width:760px;margin:32px auto 0;background:none;border:0;box-shadow:none;padding:24px 28px;text-align:center}
 .thanks b{font-family:'Space Grotesk',sans-serif;display:block;margin-bottom:6px}
 .thanks p{color:var(--muted2)}
 .ways .card{text-align:center;padding:28px 22px}
@@ -327,21 +347,25 @@ button,input,select,textarea{font:inherit;color:inherit}
 .ways h3{font-family:'Space Grotesk',sans-serif;font-size:17px;margin-top:8px;line-height:1.3}
 
 /* Contact */
-.contact{display:grid;grid-template-columns:5fr 7fr;gap:32px;align-items:start}
+.contact{max-width:var(--max);margin-left:auto;margin-right:auto}
 .desk{display:flex;flex-direction:column;gap:22px}
 .desk li{display:flex;gap:16px;align-items:center}
 .desk .icon{margin:0;flex-shrink:0}
 .desk small{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.desk-row{display:grid;grid-template-columns:1.3fr 1.15fr .8fr;gap:20px 28px;padding-bottom:28px;margin-bottom:32px;border-bottom:2px dashed #EBDDCB}
+.desk-row li{align-items:flex-start}
+.desk-row b{font-size:15px;overflow-wrap:normal}
+@media (max-width:860px){.desk-row{grid-template-columns:1fr}}
 .desk b{font-family:'Space Grotesk',sans-serif;font-weight:600;overflow-wrap:anywhere}
-.form{background:#fff;border-radius:28px;padding:40px;box-shadow:var(--shadow)}
+.form{background:none;border-radius:0;padding:0;box-shadow:none}
 .fields{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
 .field{display:flex;flex-direction:column;gap:8px}
 .field.full{grid-column:1 / -1}
 .field label{font-size:15px;font-weight:500}
 .field .req{color:var(--brick)}
-.field input,.field select,.field textarea{width:100%;min-height:54px;padding:13px 18px;border-radius:16px;border:2px solid #E4DDEF;background:#FBF9FD;font-size:16px;transition:border-color .2s,background-color .2s}
+.field input,.field select,.field textarea{width:100%;min-height:54px;padding:13px 18px;border-radius:16px;border:2px solid #EBDDCB;background:#fff;font-size:16px;transition:border-color .2s,box-shadow .2s}
 .field textarea{min-height:130px;resize:vertical}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--indigo);background:#fff}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--coral);box-shadow:0 0 0 4px rgba(225,78,45,.14)}
 .field input:user-invalid,.field select:user-invalid{border-color:var(--brick)}
 .hint{font-size:13px;color:var(--muted)}
 .actions{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:18px}
@@ -353,20 +377,22 @@ button,input,select,textarea{font:inherit;color:inherit}
 .done .icon{margin:0}
 
 /* Footer */
-.site-foot{background:var(--indigo);color:#fff;padding:64px var(--pad) 40px}
-.foot-grid{display:grid;grid-template-columns:5fr 4fr 4fr;gap:40px}
-.foot-grid .logo-chip{display:inline-block;background:#fff;border-radius:16px;padding:12px 16px}
-.foot-grid .logo-chip img{width:150px;height:auto}
-.foot-grid h4{font-family:'Space Grotesk',sans-serif;color:var(--gold);font-size:16px;margin-bottom:14px}
+.site-foot{background:var(--indigo);color:#fff;padding:104px var(--pad) 48px;font-size:17px}
+.foot-grid{display:grid;grid-template-columns:5fr 4fr 4fr;gap:56px}
+.foot-grid .logo-chip{display:inline-block;background:none;padding:0}
+.foot-grid .logo-chip img{width:220px;height:auto}
+.foot-grid .foot-motto{margin-top:26px;font-family:'Caveat','Comic Sans MS',cursive;font-weight:700;font-size:32px;line-height:1.15;color:var(--gold)}
+.foot-grid h4{font-family:'Space Grotesk',sans-serif;color:var(--gold);font-size:22px;margin-bottom:22px}
 .foot-grid p{color:#D9D1EC}
-.foot-links{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
-.foot-links a{text-decoration:none;color:#E4DDF3}
+.foot-links{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px}
+.foot-links a{text-decoration:none;color:#E4DDF3;font-size:17px}
 .foot-links a:hover{color:#fff;text-decoration:underline}
-.foot-mail{display:flex;flex-direction:column;gap:14px}
-.foot-mail small{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#CFC7E2}
-.foot-mail a{color:#fff;text-decoration:none;font-weight:600;overflow-wrap:anywhere}
+.foot-mail{display:flex;flex-direction:column;gap:22px}
+.foot-mail small{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#CFC7E2;margin-bottom:4px}
+.foot-mail a{color:#fff;text-decoration:none;font-weight:600;font-size:18px;overflow-wrap:anywhere}
 .foot-mail a:hover{text-decoration:underline}
-.legal{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);text-align:center;font-size:14px;color:#CFC7E2}
+.legal{margin-top:72px;padding-top:32px;border-top:1px solid rgba(255,255,255,.14);text-align:center;font-size:15px;color:#CFC7E2}
+@media (max-width:760px){.site-foot{padding:72px var(--pad) 40px}.foot-grid{gap:44px}.foot-grid .logo-chip img{width:170px}.foot-grid .foot-motto{font-size:28px}}
 
 /* Motion */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
@@ -380,12 +406,14 @@ button,input,select,textarea{font:inherit;color:inherit}
   .nav.open{opacity:1;visibility:visible;transform:none}
   .nav ul{flex-direction:column;gap:0}
   .nav ul a{display:block;font-size:17px;padding:12px 0}
+  .nav ul a.active{border-bottom-color:transparent;box-shadow:inset 3px 0 0 var(--coral);padding-left:14px}
   .nav .btn{align-self:flex-start}
 }
 @media (max-width:1024px){
   .g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))}
   .feature,.prob,.pair,.free,.what-is,.duo,.note-row,.receive,.contact,.foot-grid{grid-template-columns:1fr}
-  .feature-img{aspect-ratio:4/5;max-width:440px;width:100%;margin:0 auto}
+  .feature{padding:40px}
+  .model-art{min-height:0;aspect-ratio:10/7}
   .journey,.measure ul{grid-template-columns:repeat(2,minmax(0,1fr))}
   .phase .card{min-height:0!important}
   .albums{grid-template-columns:1fr 1fr}
@@ -395,12 +423,14 @@ button,input,select,textarea{font:inherit;color:inherit}
 @media (max-width:760px){
   .sec{padding:80px var(--pad)}
   .hero{padding:56px var(--pad) 80px}
-  .g2,.g3,.g4,.g5,.journey,.measure ul,.glance ul,.fields,.minis,.albums{grid-template-columns:1fr}
+  .g2,.g3,.g4,.g5,.journey,.measure ul,.glance ul,.fields,.albums{grid-template-columns:1fr}
   .album:last-child{grid-column:auto}
   .head-in{height:72px}
   .nav{inset:72px 0 auto 0}
   .logo img{width:148px}
-  .feature,.quote-card,.duo,.measure,.glance,.words,.form,.thesis{padding:28px 22px;border-radius:24px}
+  .minis{grid-template-columns:1fr;gap:12px}.minis li,.minis li:first-child{padding:0}.minis li+li{border-left:0;border-top:2px dashed var(--line);padding-top:12px}
+  .feature::after{display:none}
+  .feature,.quote-card,.duo,.measure,.glance,.words,.thesis{padding:28px 22px;border-radius:24px}
   .card{padding:26px 22px;border-radius:24px}
   .hero .btns{flex-direction:column;align-items:center}
   .event{grid-template-columns:1fr;gap:20px;justify-items:start}
@@ -460,6 +490,8 @@ button,input,select,textarea{font:inherit;color:inherit}
   <symbol id="i-volunteer_activism" viewBox="0 0 24 24"><path d="M12 20s-8-4.5-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.5 12 20 12 20Z"/></symbol>
   <symbol id="i-wifi_off" viewBox="0 0 24 24"><path d="M2 8.8a15 15 0 0 1 20 0M5.5 12.3a10 10 0 0 1 13 0M9 15.8a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1"/><path d="M3 3l18 18"/></symbol>
   <symbol id="i-work" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18M5 21V5l7-2v18M12 7l7 2v12"/><path d="M8 9h1M8 13h1M8 17h1M15 13h1M15 17h1"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8S10 3 7.5 4.5 9 8 12 8Zm0 0s2-5 4.5-3.5S15 8 12 8Z"/></symbol>
 </svg>
 
 <!-- ============ HEADER ============ -->
@@ -498,10 +530,41 @@ button,input,select,textarea{font:inherit;color:inherit}
   </div>
   <p class="global"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-public"/></svg>Girls with Goals serves girls in every country.</p>
 
+  <div class="shows" aria-label="Photographs from the Career Expo, 20 October 2026">
+    <div class="shows-track">
+      <figure class="shot-card"><img src="./assets/slider/slide-01.jpg" alt="Girls dancing and celebrating at the Career Expo" width="2000" height="1333"></figure>
+      <figure class="shot-card"><img src="./assets/slider/slide-02.jpg" alt="Girls in the hall taking notes during the programme" width="2000" height="1333" loading="lazy"></figure>
+      <figure class="shot-card"><img src="./assets/slider/slide-03.jpg" alt="A speaker on stage in front of the Career Expo backdrop" width="2000" height="1829" loading="lazy"></figure>
+      <figure class="shot-card"><img src="./assets/slider/slide-04.jpg" alt="Girls smiling and making peace signs in the hall" width="2000" height="1333" loading="lazy"></figure>
+      <figure class="shot-card"><img src="./assets/slider/slide-05.jpg" alt="Lenmed’s team at their stand" width="1688" height="2000" loading="lazy"></figure>
+      <figure class="shot-card"><img src="./assets/slider/slide-06.jpg" alt="The Sibanye-Stillwater team at their stand with virtual reality headsets" width="2000" height="1333" loading="lazy"></figure>
+      <figure class="shot-card"><img src="./assets/slider/slide-07.jpg" alt="Lusenga Inc’s team talking with girls at their stand" width="2000" height="1590" loading="lazy"></figure>
+      <figure class="shot-card"><img src="./assets/slider/slide-08.jpg" alt="A visitor trying a virtual reality headset on the expo floor" width="1333" height="2000" loading="lazy"></figure>
+      <figure class="shot-card"><img src="./assets/slider/slide-09.jpg" alt="Girls cheering on the steps outside the venue during a prize handover" width="2000" height="1333" loading="lazy"></figure>
+      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-01.jpg" alt="" width="2000" height="1333" loading="lazy"></figure>
+      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-02.jpg" alt="" width="2000" height="1333" loading="lazy"></figure>
+      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-03.jpg" alt="" width="2000" height="1829" loading="lazy"></figure>
+      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-04.jpg" alt="" width="2000" height="1333" loading="lazy"></figure>
+      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-05.jpg" alt="" width="1688" height="2000" loading="lazy"></figure>
+      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-06.jpg" alt="" width="2000" height="1333" loading="lazy"></figure>
+      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-07.jpg" alt="" width="2000" height="1590" loading="lazy"></figure>
+      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-08.jpg" alt="" width="1333" height="2000" loading="lazy"></figure>
+      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-09.jpg" alt="" width="2000" height="1333" loading="lazy"></figure>
+    </div>
+  </div>
+
   <div class="feature reveal">
-    <div>
+    <figure class="model-art">
+      <img src="./assets/photos/girls-with-goals-open-book.jpg" alt="The Girls with Goals journal, South African edition, opened to show its front and back covers" width="2000" height="1400" loading="lazy">
+    </figure>
+    <div class="model-copy">
       <span class="pill"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-menu_book"/></svg>The Model in One Line</span>
-      <h2 class="h">An institution buys. A girl receives it free. Her name and a letter written for her sit inside.</h2>
+      <h2 class="sr">An institution buys. A girl receives it free. Her name and a letter written for her sit inside.</h2>
+      <ol class="model-steps" aria-hidden="true">
+        <li><span class="dot"><svg class="ms" viewBox="0 0 24 24"><use href="#i-building"/></svg></span><b class="h">An institution buys.</b></li>
+        <li><span class="dot gold"><svg class="ms" viewBox="0 0 24 24"><use href="#i-gift"/></svg></span><b class="h">A girl receives it free.</b></li>
+        <li><span class="dot ink"><svg class="ms" viewBox="0 0 24 24"><use href="#i-mail"/></svg></span><b class="h">Her name and a letter written for her sit inside.</b></li>
+      </ol>
       <p class="t">Girls with Goals is a structured, self guided career and confidence journal.</p>
       <ul class="minis">
         <li><b>20M+</b><span>copies a month, production capacity</span></li>
@@ -509,10 +572,6 @@ button,input,select,textarea{font:inherit;color:inherit}
         <li><b>Free</b><span>to every girl who receives it</span></li>
       </ul>
     </div>
-    <figure class="feature-img">
-      <img src="./assets/photos/hero-girl-with-book.webp" alt="Illustration of a smiling girl holding up her Girls with Goals journal" width="1122" height="1402">
-      <figcaption class="tagline"><b>See It. Believe It.</b><span>Plan It. Become It.</span></figcaption>
-    </figure>
   </div>
 </section>
 
@@ -850,7 +909,6 @@ button,input,select,textarea{font:inherit;color:inherit}
 
     <div class="cta-line reveal">
       <p>Pricing and rollout plans are shared through direct conversation.</p>
-      <p><span class="email">Email:</span> <a class="mail" href="mailto:partnerships@ascendgirlsnetwork.com">partnerships@ascendgirlsnetwork.com</a></p>
       <a class="btn bi" href="#contact" data-enquiry="bulk">Order Girls with Goals in bulk <span class="ar"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow_outward"/></svg></span></a>
     </div>
   </div>
@@ -929,8 +987,8 @@ button,input,select,textarea{font:inherit;color:inherit}
 
     <div class="words reveal">
       <p class="eyebrow">In Their Words</p>
-      <blockquote>“A girl told us she never knew that mining careers were also for women until she saw them.”</blockquote>
-      <blockquote>“Another girl told us she was inspired when she listened to the founder and CEO of Umkho AI, who she said is only 22 years old.”</blockquote>
+      <blockquote>“A girl told us she never knew that <mark class="q-mark">mining careers were also for women</mark> until she saw them.”</blockquote>
+      <blockquote>“Another girl told us she was inspired when she listened to the founder and CEO of Umkho AI, who she said is <mark class="q-mark">only 22 years old</mark>.”</blockquote>
       <p>The first girl learnt that a career was open to her. The second saw someone her own age doing something she could aim for.</p>
     </div>
 
@@ -953,7 +1011,6 @@ button,input,select,textarea{font:inherit;color:inherit}
         <p>We are already organising the next Career Expo, planned for between <strong>February and the end of April 2027</strong>.</p>
         <p>The programme will be built around career sessions, each one brought to the girls by a sponsor whose own people tell them what their careers are, what they studied and how they got there.</p>
         <p>If you would like to sponsor, exhibit or speak at the next Expo:</p>
-        <p><span class="email">Email:</span> <a class="mail" href="mailto:partnerships@ascendgirlsnetwork.com">partnerships@ascendgirlsnetwork.com</a></p>
       </article>
     </div>
 
@@ -969,13 +1026,12 @@ button,input,select,textarea{font:inherit;color:inherit}
       <h2 id="gallery-h" class="h h2">The day in pictures.</h2>
       <p class="lead">More than 500 girls, one hall, one day that put their futures in front of them.</p>
     </div>
-    <!-- Replace each .ph placeholder with the event photograph: <img src="./assets/gallery/..." alt="who, where, what"> -->
     <ol class="albums mt-l">
-      <li class="album wide reveal"><div class="ph" aria-hidden="true"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo_camera"/></svg></div><div class="txt"><h3>1. Arrival</h3><p>Girls arriving and registering.</p></div></li>
-      <li class="album wide reveal"><div class="ph" aria-hidden="true"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo_camera"/></svg></div><div class="txt"><h3>2. On Stage</h3><p>Speakers, the founders of Tol Thema and Umkho AI, and the programme.</p></div></li>
-      <li class="album reveal"><div class="ph" aria-hidden="true"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo_camera"/></svg></div><div class="txt"><h3>3. The Expo Floor</h3><p>Colleges and employers talking to the girls.</p></div></li>
-      <li class="album reveal"><div class="ph" aria-hidden="true"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo_camera"/></svg></div><div class="txt"><h3>4. Our Partners at Their Stands</h3><p>Sibanye-Stillwater, Harmony Gold, Lenmed and Lusenga Inc with the girls.</p></div></li>
-      <li class="album reveal"><div class="ph" aria-hidden="true"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-photo_camera"/></svg></div><div class="txt"><h3>5. The Girls</h3><p>Moments of learning, laughing and winning prizes.</p></div></li>
+      <li class="album wide reveal"><div class="ph"><img src="./assets/gallery/arrival-girls-gathered.jpg" alt="Girls in school uniform gathered on the steps outside the venue, listening to a speaker" width="2000" height="1333" loading="lazy"></div><div class="txt"><h3>1. Arrival</h3><p>Girls arriving and registering.</p></div></li>
+      <li class="album wide reveal"><div class="ph two"><img src="./assets/gallery/on-stage-speaker.jpg" alt="A speaker addressing the girls from the stage in front of the Career Expo backdrop" width="2000" height="1618" loading="lazy"><img src="./assets/gallery/on-stage-healthcare.jpg" alt="Healthcare professionals speaking to the girls from the stage" width="2000" height="1714" loading="lazy"></div><div class="txt"><h3>2. On Stage</h3><p>Speakers, the founders of Tol Thema and Umkho AI, and the programme.</p></div></li>
+      <li class="album reveal"><div class="ph"><img src="./assets/gallery/expo-floor-vr.jpg" alt="Girls trying virtual reality headsets on the expo floor" width="2000" height="1333" loading="lazy"></div><div class="txt"><h3>3. The Expo Floor</h3><p>Colleges and employers talking to the girls.</p></div></li>
+      <li class="album reveal"><div class="ph"><img src="./assets/gallery/lusenga-stand.jpg" alt="Lusenga Inc’s team talking with girls at their stand" width="2000" height="1590" loading="lazy"></div><div class="txt"><h3>4. Our Partners at Their Stands</h3><p>Sibanye-Stillwater, Harmony Gold, Lenmed and Lusenga Inc with the girls.</p></div></li>
+      <li class="album reveal"><div class="ph"><img src="./assets/gallery/girls-taking-notes.jpg" alt="Girls in the hall taking notes during the programme" width="2000" height="1333" loading="lazy"></div><div class="txt"><h3>5. The Girls</h3><p>Moments of learning, laughing and winning prizes.</p></div></li>
     </ol>
     <p class="gal-foot reveal">Photographs taken at the Career Expo, <strong>20 October 2026</strong>, Expo Centre Johannesburg.</p>
   </div>
@@ -1007,7 +1063,7 @@ button,input,select,textarea{font:inherit;color:inherit}
         <p>Thank you for bringing your own people to speak with the girls and for putting careers in healthcare in front of them.</p>
       </article>
       <article class="card reveal">
-        <div class="top"><span class="logo-box"><span class="wordmark">Lusenga <span>Inc</span></span></span><span class="badge b-comm">Community Partner</span></div>
+        <div class="top"><span class="logo-box"><img src="./assets/sponsors/lusenga.png" alt="Lusenga Inc: Attorneys, Conveyancers, Notaries" width="815" height="198" loading="lazy"></span><span class="badge b-comm">Community Partner</span></div>
         <h3 class="h">Lusenga Inc</h3>
         <p>A girl who has never been inside a law firm cannot picture working in one.</p>
         <p>Lusenga Inc put the profession in front of her, with its own stand, its own people and a banner of its legal practice areas.</p>
@@ -1028,7 +1084,6 @@ button,input,select,textarea{font:inherit;color:inherit}
       <li class="card reveal"><span class="k">03</span><h3>Speak at the Expo</h3></li>
       <li class="card reveal"><span class="k">04</span><h3>Provide Girls with Goals journals</h3></li>
     </ol>
-    <p class="center-note reveal"><span class="email">Email:</span> <a class="mail" href="mailto:partnerships@ascendgirlsnetwork.com">partnerships@ascendgirlsnetwork.com</a></p>
   </div>
 </section>
 
@@ -1042,16 +1097,12 @@ button,input,select,textarea{font:inherit;color:inherit}
     </div>
 
     <div class="contact mt-l">
-      <div class="card reveal">
-        <h3 class="h h3" style="margin-bottom:24px">Email</h3>
-        <ul class="desk">
-          <li><span class="icon coral"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-menu_book"/></svg></span><div><small>Bulk Orders, Partnerships and Girls with Goals</small><b><a class="mail" href="mailto:partnerships@ascendgirlsnetwork.com">partnerships@ascendgirlsnetwork.com</a></b></div></li>
-          <li><span class="icon gold"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-event"/></svg></span><div><small>Events, Sponsorship and Attendance</small><b><a class="mail" href="mailto:events@ascendgirlsnetwork.com">events@ascendgirlsnetwork.com</a></b></div></li>
+      <div class="form reveal" id="c-form">
+        <ul class="desk desk-row">
+          <li><span class="icon coral"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-menu_book"/></svg></span><div><small>Bulk Orders, Partnerships and Girls with Goals</small><b><a class="mail" href="mailto:partnerships@ascendgirlsnetwork.com">partnerships@<wbr>ascendgirlsnetwork.com</a></b></div></li>
+          <li><span class="icon gold"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-event"/></svg></span><div><small>Events, Sponsorship and Attendance</small><b><a class="mail" href="mailto:events@ascendgirlsnetwork.com">events@<wbr>ascendgirlsnetwork.com</a></b></div></li>
           <li><span class="icon lilac"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-location_on"/></svg></span><div><small>Based In</small><b>Johannesburg, South Africa</b></div></li>
         </ul>
-      </div>
-
-      <div class="form reveal" id="c-form">
         <form id="contact-form" novalidate>
           <p hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
           <div class="fields">
@@ -1093,8 +1144,8 @@ button,input,select,textarea{font:inherit;color:inherit}
 <footer class="site-foot">
   <div class="wrap foot-grid">
     <div>
-      <span class="logo-chip"><img src="./assets/72f354eb3592d0125e2610cb80c3db66.png" alt="Ascend Girls Network" width="196" height="47" loading="lazy"></span>
-      <p style="margin-top:18px">See It. Believe It. Plan It. Become It.</p>
+      <span class="logo-chip"><img src="./assets/71feae43aab8ce71b2df5120068dc6d8.png" alt="Ascend Girls Network" width="1379" height="332" loading="lazy"></span>
+      <p class="foot-motto">See It. Believe It. Plan It. Become It.</p>
       <p style="margin-top:8px">Johannesburg, South Africa</p>
     </div>
     <div>
@@ -1128,6 +1179,24 @@ button,input,select,textarea{font:inherit;color:inherit}
   btn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
   nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // Highlight the menu link for the section on screen. Sections without their own link (Report,
+  // Gallery, Supporters) count as part of the section before them; above "Why" nothing is highlighted.
+  var navLinks = [].slice.call(nav.querySelectorAll('ul a[href^="#"]'));
+  var spy = navLinks.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  var head = document.querySelector('.site-head');
+  function markActive() {
+    var line = head.offsetHeight + window.innerHeight * 0.3, current = -1;
+    spy.forEach(function (sec, i) { if (sec && sec.getBoundingClientRect().top <= line) current = i; });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) current = spy.length - 1;
+    navLinks.forEach(function (a, i) {
+      a.classList.toggle('active', i === current);
+      if (i === current) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+    });
+  }
+  window.addEventListener('scroll', markActive, { passive: true });
+  window.addEventListener('resize', markActive);
+  markActive();
 
   // Reveal on scroll
   var els = document.querySelectorAll('.reveal');
