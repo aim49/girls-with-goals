@@ -36,7 +36,7 @@ a{color:inherit}
 img{max-width:100%;display:block}
 button,input,select,textarea{font:inherit;color:inherit}
 .h{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.1;text-wrap:balance}
-.ms{width:1em;height:1em;font-size:24px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block;vertical-align:middle}
+.ms{width:1em;height:1em;font-size:24px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2.1;shape-rendering:geometricPrecision;stroke-linecap:round;stroke-linejoin:round;display:inline-block;vertical-align:middle}
 .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .skip{position:absolute;left:16px;top:-60px;z-index:100;background:var(--indigo);color:#fff;padding:12px 18px;border-radius:12px;font-weight:600}
 .skip:focus{top:16px}
@@ -70,7 +70,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .card.dark{background:var(--indigo-2);color:#fff;box-shadow:none}
 .card.dark p{color:#D9D1EC}
 .card h3{margin-bottom:10px}
-.icon{width:48px;height:48px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px}
+.icon{width:50px;height:50px;border-radius:16px 20px 14px 22px;transform:rotate(-4deg);transition:transform .35s cubic-bezier(.34,1.56,.64,1);display:inline-flex;align-items:center;justify-content:center;margin-bottom:22px}
 .icon.coral{background:var(--coral-soft);color:var(--brick)}
 .icon.gold{background:var(--gold-soft);color:var(--gold-deep)}
 .icon.lilac{background:var(--lilac);color:var(--indigo)}
@@ -368,8 +368,9 @@ button,input,select,textarea{font:inherit;color:inherit}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--coral);box-shadow:0 0 0 4px rgba(225,78,45,.14)}
 .field input:user-invalid,.field select:user-invalid{border-color:var(--brick)}
 .hint{font-size:13px;color:var(--muted)}
-.actions{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:18px}
-.actions p{flex:1;min-width:220px;font-size:13px;color:var(--muted)}
+.actions{margin-top:28px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+.actions p{max-width:560px;font-size:13px;color:var(--muted)}
+.actions p:empty{display:none}
 .actions p.err{color:var(--brick);font-weight:600}
 .done{display:none;flex-direction:column;align-items:flex-start;gap:14px}
 .form.sent form{display:none}
@@ -439,59 +440,93 @@ button,input,select,textarea{font:inherit;color:inherit}
   .what-is .art img{height:220px}
   .foot-links{grid-template-columns:1fr}
 }
+
+/* ---------- Playful layer: hand-drawn marks on a serious layout ---------- */
+.squig{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'%3E%3Cpath d='M2 9 C 40 3, 80 3, 120 7 S 180 11, 198 5' fill='none' stroke='%23F5AD09' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") left bottom / 100% .32em no-repeat;padding-bottom:.1em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.eyebrow::before,.eyebrow::after{content:"\2726";width:auto;height:auto;background:none;opacity:1;color:var(--gold);font-size:13px;letter-spacing:0}
+.head{position:relative}
+.sec:nth-of-type(odd) .head::after,.sec:nth-of-type(even) .head::after{content:"";position:absolute;pointer-events:none;width:46px;height:46px;background:no-repeat center / contain}
+.sec:nth-of-type(odd) .head::after{right:-8px;top:-18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1.5l2.4 7.1 7.1 2.4-7.1 2.4L12 20.5l-2.4-7.1-7.1-2.4 7.1-2.4z' fill='%23F5AD09'/%3E%3C/svg%3E");transform:rotate(12deg)}
+.sec:nth-of-type(even) .head::after{left:-6px;top:4px;width:64px;height:30px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 30'%3E%3Cpath d='M3 18c7-12 13-12 17 0s10 12 14 0 10-12 14 0 9 10 13 2' fill='none' stroke='%23E14E2D' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");opacity:.8;transform:rotate(-8deg)}
+.hero{position:relative;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;pointer-events:none;border-radius:50%}
+.hero::before{left:6%;top:120px;width:70px;height:70px;border:3px dashed rgba(225,78,45,.35)}
+.hero::after{right:8%;top:200px;width:34px;height:34px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1.5l2.4 7.1 7.1 2.4-7.1 2.4L12 20.5l-2.4-7.1-7.1-2.4 7.1-2.4z' fill='%232A1B4D'/%3E%3C/svg%3E") no-repeat center / contain;border-radius:0;transform:rotate(-10deg)}
+.num{font-family:'Caveat','Comic Sans MS',cursive;font-size:24px;font-weight:700;transform:rotate(-6deg)}
+.grid > :nth-child(even) .num,.grid > .num:nth-child(even){transform:rotate(5deg)}
+.card:hover{transform:translateY(-4px) rotate(-.6deg)}
+.grid > .card:nth-child(even):hover{transform:translateY(-4px) rotate(.6deg)}
+.sticker{position:absolute;z-index:2;display:inline-flex;align-items:center;justify-content:center;font-family:'Caveat','Comic Sans MS',cursive;font-weight:700;line-height:1;box-shadow:0 12px 24px -12px rgba(35,26,58,.5)}
+.s-free{right:18px;top:18px;width:84px;height:84px;border-radius:50%;background:var(--g-coral);color:#fff;font-size:28px;transform:rotate(-12deg)}
+.s-date{position:relative;align-self:center;background:var(--gold);color:var(--ink);font-size:24px;padding:6px 16px;border-radius:10px;transform:rotate(-4deg);margin-bottom:-4px}
+@media (max-width:760px){.sec .head::after,.hero::before,.hero::after{display:none}.s-free{width:64px;height:64px;font-size:22px;right:12px;top:12px}}
+@media (prefers-reduced-motion:reduce){.card:hover,.grid > .card:nth-child(even):hover{transform:none}}
+
+/* Icons: tiles tilt the other way on alternate cards and wiggle on hover */
+.grid > :nth-child(even) .icon{transform:rotate(4deg);border-radius:20px 14px 22px 16px}
+.icon .ms{font-size:30px;transform:rotate(4deg)}
+.grid > :nth-child(even) .icon .ms{transform:rotate(-4deg)}
+.card:hover .icon{transform:rotate(8deg) scale(1.08)}
+.grid > :nth-child(even).card:hover .icon{transform:rotate(-8deg) scale(1.08)}
+.btn .ar .ms{stroke-width:2.6}
+@media (prefers-reduced-motion:reduce){.icon{transition:none}.card:hover .icon,.grid > :nth-child(even).card:hover .icon{transform:none}}
+
+/* "Why Institutions Choose It": parallax photo behind the section, indigo stays the main colour */
+#model{overflow:hidden;background:var(--indigo)}
+#model .parallax{position:absolute;left:0;right:0;top:-15%;bottom:-15%;background:url("./assets/slider/slide-09.jpg") center / cover no-repeat;opacity:.1;will-change:transform;pointer-events:none}
+#model > .wrap{position:relative;z-index:1}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- Icon sprite -->
+<!-- Icon sprite: outline + soft two-tone accent -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-arrow_outward" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
-  <symbol id="i-autorenew" viewBox="0 0 24 24"><path d="M17 2l3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12"/><path d="M7 22l-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/></symbol>
-  <symbol id="i-balance" viewBox="0 0 24 24"><path d="M12 3v18M5 21h14M6 7h12M6 7l-3 7a3 3 0 0 0 6 0Zm12 0-3 7a3 3 0 0 0 6 0Z"/></symbol>
-  <symbol id="i-bar_chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
-  <symbol id="i-calendar_month" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
-  <symbol id="i-campaign" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
-  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
-  <symbol id="i-description" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6Z"/><path d="M14 3v5h5M9 13h7M9 17h7"/></symbol>
-  <symbol id="i-directions_bus" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16M8 21v-3M16 21v-3"/><circle cx="8" cy="14.5" r="1"/><circle cx="16" cy="14.5" r="1"/></symbol>
-  <symbol id="i-diversity_3" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c.8-3.5 3.5-5.5 7-5.5s6.2 2 7 5.5M16 14.5c2.8 0 5 1.6 5.8 4.5"/></symbol>
-  <symbol id="i-edit_note" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3 6 1.5 1.5L7 5M3 12l1.5 1.5L7 11M3 18l1.5 1.5L7 17"/></symbol>
-  <symbol id="i-emoji_events" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0Z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 21h8M9 17h6"/></symbol>
-  <symbol id="i-engineering" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
-  <symbol id="i-event" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
-  <symbol id="i-explore" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5Z"/></symbol>
-  <symbol id="i-favorite" viewBox="0 0 24 24"><path d="M12 20s-8-4.5-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.5 12 20 12 20Z"/></symbol>
-  <symbol id="i-gavel" viewBox="0 0 24 24"><path d="M12 3v18M5 21h14M6 7h12M6 7l-3 7a3 3 0 0 0 6 0Zm12 0-3 7a3 3 0 0 0 6 0Z"/></symbol>
-  <symbol id="i-groups" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c.8-3.5 3.5-5.5 7-5.5s6.2 2 7 5.5M16 14.5c2.8 0 5 1.6 5.8 4.5"/></symbol>
-  <symbol id="i-handshake" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c.8-3.5 3.5-5.5 7-5.5s6.2 2 7 5.5M16 14.5c2.8 0 5 1.6 5.8 4.5"/></symbol>
-  <symbol id="i-health_and_safety" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
-  <symbol id="i-hourglass_top" viewBox="0 0 24 24"><path d="M6 3h12M6 21h12M7 3v3a5 5 0 0 0 10 0V3M7 21v-3a5 5 0 0 1 10 0v3"/></symbol>
-  <symbol id="i-location_on" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
-  <symbol id="i-mark_email_read" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
-  <symbol id="i-menu_book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2Z"/><path d="M4 21h15"/></symbol>
-  <symbol id="i-money_off" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8S10 3 7.5 4.5 9 8 12 8Zm0 0s2-5 4.5-3.5S15 8 12 8Z"/></symbol>
-  <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-1.5-1.5-2-1.5-3.2 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4c0-4-4-7-9-7Z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7" r="1"/></symbol>
-  <symbol id="i-photo_camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
-  <symbol id="i-photo_library" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
-  <symbol id="i-print" viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4v-7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7h-2"/><path d="M6 14h12v7H6Z"/></symbol>
-  <symbol id="i-public" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
-  <symbol id="i-record_voice_over" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
-  <symbol id="i-school" viewBox="0 0 24 24"><path d="M3 10 12 5l9 5-9 5-9-5Z"/><path d="M7 12v5c3 2 7 2 10 0v-5"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6Z"/></symbol>
-  <symbol id="i-storefront" viewBox="0 0 24 24"><path d="M3 9h18l-2-5H5Z"/><path d="M5 9v11h14V9M9 20v-6h6v6"/></symbol>
-  <symbol id="i-trending_down" viewBox="0 0 24 24"><path d="m3 7 6 6 4-4 8 8"/><path d="M15 17h6v-6"/></symbol>
-  <symbol id="i-verified" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
-  <symbol id="i-verified_user" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
-  <symbol id="i-visibility" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
-  <symbol id="i-volunteer_activism" viewBox="0 0 24 24"><path d="M12 20s-8-4.5-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.5 12 20 12 20Z"/></symbol>
-  <symbol id="i-wifi_off" viewBox="0 0 24 24"><path d="M2 8.8a15 15 0 0 1 20 0M5.5 12.3a10 10 0 0 1 13 0M9 15.8a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1"/><path d="M3 3l18 18"/></symbol>
-  <symbol id="i-work" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
-  <symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18M5 21V5l7-2v18M12 7l7 2v12"/><path d="M8 9h1M8 13h1M8 17h1M15 13h1M15 17h1"/></symbol>
-  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8S10 3 7.5 4.5 9 8 12 8Zm0 0s2-5 4.5-3.5S15 8 12 8Z"/></symbol>
+  <symbol id="i-arrow_outward" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></symbol>
+  <symbol id="i-autorenew" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M19.6 10A8 8 0 0 0 5.4 7.2L4 9"/><path d="M4 4v5h5"/><path d="M4.4 14a8 8 0 0 0 14.2 2.8L20 15"/><path d="M20 20v-5h-5"/></symbol>
+  <symbol id="i-balance" viewBox="0 0 24 24"><path d="M2 13h6a3 3 0 0 1-6 0Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M16 13h6a3 3 0 0 1-6 0Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M12 5v15"/><path d="M7 20h10"/><path d="M5 7h14"/><path d="M5 7l-3 6a3 3 0 0 0 6 0Z"/><path d="M19 7l-3 6a3 3 0 0 0 6 0Z"/><circle cx="12" cy="4.5" r="1.6" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-bar_chart" viewBox="0 0 24 24"><path d="M4 12h4v8H4Z" fill="currentColor" fill-opacity=".22" stroke="none"/><rect x="4" y="12" width="4" height="8" rx="1"/><rect x="10" y="7" width="4" height="13" rx="1"/><rect x="16" y="3" width="4" height="17" rx="1"/><path d="M2 21h20"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M12 7l7 2v12h-7Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M3 21h18"/><path d="M5 21V5l7-2v18"/><path d="M12 7l7 2v12"/><path d="M8 9h1"/><path d="M8 13h1"/><path d="M8 17h1"/><path d="M15 13h1"/><path d="M15 17h1"/></symbol>
+  <symbol id="i-calendar_month" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 8a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v2H3Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M3 10h18M8 3v4M16 3v4"/><circle cx="8" cy="15" r="1.3" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r="1.3" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r="1.3" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-campaign" viewBox="0 0 24 24"><path d="M7 9l7-4v14l-7-4Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M3 10v4a1 1 0 0 0 1 1h3l7 4V5L7 9H4a1 1 0 0 0-1 1Z"/><path d="M18 9a4 4 0 0 1 0 6"/><path d="M7 15l1 5h3l-1-4.2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+  <symbol id="i-description" viewBox="0 0 24 24"><path d="M14 3v5h5Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M6 3h9l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5"/><path d="M9 13h6"/><path d="M9 17h4"/></symbol>
+  <symbol id="i-directions_bus" viewBox="0 0 24 24"><path d="M4 6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v5H4Z" fill="currentColor" fill-opacity=".22" stroke="none"/><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16"/><path d="M8 21v-3"/><path d="M16 21v-3"/><circle cx="8" cy="14.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="16" cy="14.5" r="1.3" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-diversity_3" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3" fill="currentColor" fill-opacity=".22" stroke="none"/><circle cx="12" cy="7" r="3"/><circle cx="5" cy="10" r="2.3"/><circle cx="19" cy="10" r="2.3"/><path d="M6.5 20a5.5 5.5 0 0 1 11 0"/><path d="M1.5 18.5a3.6 3.6 0 0 1 5-3.3"/><path d="M22.5 18.5a3.6 3.6 0 0 0-5-3.3"/></symbol>
+  <symbol id="i-edit_note" viewBox="0 0 24 24"><circle cx="5" cy="18" r="2.2" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M10 6h10"/><path d="M10 12h10"/><path d="M10 18h7"/><path d="m3.5 6 1.5 1.5L7.6 5"/><path d="m3.5 12 1.5 1.5L7.6 11"/><circle cx="5" cy="18" r="1.4"/></symbol>
+  <symbol id="i-emoji_events" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M8 4h8v5a4 4 0 0 1-8 0Z"/><path d="M8 6H5.5A2.5 2.5 0 0 0 8 10"/><path d="M16 6h2.5A2.5 2.5 0 0 1 16 10"/><path d="M12 13v4"/><path d="M8.5 21h7"/><path d="M9.5 17h5"/><path d="M19.5 1.5l.7 1.6 1.6.7-1.6.7-.7 1.6-.7-1.6-1.6-.7 1.6-.7Z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-engineering" viewBox="0 0 24 24"><path d="M5 17a7 7 0 0 1 14 0Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M5 17a7 7 0 0 1 14 0"/><path d="M3.5 17h17v2.5h-17Z"/><path d="M10 10.3V7h4v3.3"/></symbol>
+  <symbol id="i-event" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 8a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v2H3Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="m9 15.5 2 2 4-4"/></symbol>
+  <symbol id="i-explore" viewBox="0 0 24 24"><path d="M15.5 8.5l-2 5-3-3Z" fill="currentColor" fill-opacity=".22" stroke="none"/><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5Z"/></symbol>
+  <symbol id="i-favorite" viewBox="0 0 24 24"><path d="M12 20.3s-8-4.6-8-10.4A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8 2.5c0 5.8-8 10.4-8 10.4Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M12 20.3s-8-4.6-8-10.4A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8 2.5c0 5.8-8 10.4-8 10.4Z"/></symbol>
+  <symbol id="i-gavel" viewBox="0 0 24 24"><path d="M13 2.5l8 8-2.6 2.6-8-8Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M13 2.5l8 8-2.6 2.6-8-8Z"/><path d="M11.7 8.3 3.6 16.4a1.7 1.7 0 0 0 2.4 2.4l8.1-8.1"/><path d="M13 21.5h8"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path d="M3 9a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v4H3Z" fill="currentColor" fill-opacity=".22" stroke="none"/><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8"/><path d="M12 8v13"/><path d="M12 8S10 3 7.5 4.5 9 8 12 8Zm0 0s2-5 4.5-3.5S15 8 12 8Z"/></symbol>
+  <symbol id="i-groups" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5" fill="currentColor" fill-opacity=".22" stroke="none"/><circle cx="9" cy="8" r="3.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M2.5 20c.8-3.6 3.4-5.6 6.5-5.6s5.7 2 6.5 5.6"/><path d="M16.5 14.6c2.7 0 4.7 1.6 5.4 4.4"/></symbol>
+  <symbol id="i-handshake" viewBox="0 0 24 24"><path d="M12 7.6a5 5 0 0 1 0 8.8 5 5 0 0 1 0-8.8Z" fill="currentColor" fill-opacity=".3" stroke="none"/><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></symbol>
+  <symbol id="i-health_and_safety" viewBox="0 0 24 24"><path d="M12 2.8 19.5 5.6v6c0 4.8-3.3 8-7.5 9.6-4.2-1.6-7.5-4.8-7.5-9.6v-6Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M12 2.8 19.5 5.6v6c0 4.8-3.3 8-7.5 9.6-4.2-1.6-7.5-4.8-7.5-9.6v-6Z"/><path d="M12 8.5v6"/><path d="M9 11.5h6"/></symbol>
+  <symbol id="i-hourglass_top" viewBox="0 0 24 24"><path d="M8 21v-2.2a4 4 0 0 1 8 0V21Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M6 3h12"/><path d="M6 21h12"/><path d="M7 3v2.5a5 5 0 0 0 10 0V3"/><path d="M7 21v-2.5a5 5 0 0 1 10 0V21"/></symbol>
+  <symbol id="i-location_on" viewBox="0 0 24 24"><path d="M12 21.5s7-6.4 7-12a7 7 0 0 0-14 0c0 5.6 7 12 7 12Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M12 21.5s7-6.4 7-12a7 7 0 0 0-14 0c0 5.6 7 12 7 12Z"/><circle cx="12" cy="9.5" r="2.6"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3.6 6.2h16.8L12 12Z" fill="currentColor" fill-opacity=".22" stroke="none"/><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+  <symbol id="i-mark_email_read" viewBox="0 0 24 24"><rect x="2.5" y="5" width="16" height="13" rx="2.5"/><path d="m3 7 7.5 5.3L18 7"/><circle cx="18.5" cy="17" r="4.2" fill="currentColor" stroke="none"/><path d="m16.6 17 1.4 1.4 2.6-2.8" stroke="#fff" stroke-width="1.8"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h10"/><path d="M4 17h13"/></symbol>
+  <symbol id="i-menu_book" viewBox="0 0 24 24"><path d="M12 6.5C10 5 7 4.5 3 5v13c4-.5 7 0 9 1.5Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M12 6.5C10 5 7 4.5 3 5v13c4-.5 7 0 9 1.5 2-1.5 5-2 9-1.5V5c-4-.5-7 0-9 1.5Z"/><path d="M12 6.5v13"/></symbol>
+  <symbol id="i-money_off" viewBox="0 0 24 24"><path d="M3 9a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v4H3Z" fill="currentColor" fill-opacity=".22" stroke="none"/><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8"/><path d="M12 8v13"/><path d="M12 8S10 3 7.5 4.5 9 8 12 8Zm0 0s2-5 4.5-3.5S15 8 12 8Z"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-1.5-1.5-2-1.5-3.2 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4c0-4-4-7-9-7Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-1.5-1.5-2-1.5-3.2 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4c0-4-4-7-9-7Z"/><circle cx="7.5" cy="11" r="1.4" fill="currentColor" stroke="none"/><circle cx="10" cy="7" r="1.4" fill="currentColor" stroke="none"/><circle cx="15" cy="7" r="1.4" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-photo_library" viewBox="0 0 24 24"><path d="M6 5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v9H6Z" fill="currentColor" fill-opacity=".22" stroke="none"/><rect x="6" y="3" width="15" height="13" rx="2"/><path d="M3 7v12a2 2 0 0 0 2 2h12"/><path d="m6.5 13.5 4-4 3 3 2-2 5 4.5"/><circle cx="16.5" cy="7" r="1.5" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M6 3h12v6H6Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M6 9V3h12v6"/><path d="M6 18H4v-7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7h-2"/><path d="M6 14h12v7H6Z"/><circle cx="17" cy="12" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-public" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".22" stroke="none"/><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c3 3 3 15 0 18"/><path d="M12 3c-3 3-3 15 0 18"/></symbol>
+  <symbol id="i-record_voice_over" viewBox="0 0 24 24"><path d="M9 6a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0Z" fill="currentColor" fill-opacity=".22" stroke="none"/><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/><path d="M9 21h6"/></symbol>
+  <symbol id="i-school" viewBox="0 0 24 24"><path d="M2 9.5 12 5l10 4.5-10 4.5Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M2 9.5 12 5l10 4.5-10 4.5Z"/><path d="M6 11.5V16c3.5 2.5 8.5 2.5 12 0v-4.5"/><path d="M22 9.5v5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.8 19.5 5.6v6c0 4.8-3.3 8-7.5 9.6-4.2-1.6-7.5-4.8-7.5-9.6v-6Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M12 2.8 19.5 5.6v6c0 4.8-3.3 8-7.5 9.6-4.2-1.6-7.5-4.8-7.5-9.6v-6Z"/><path d="M19.5 1.5l.7 1.6 1.6.7-1.6.7-.7 1.6-.7-1.6-1.6-.7 1.6-.7Z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-storefront" viewBox="0 0 24 24"><path d="M3 9l2-5h14l2 5Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M3 9l2-5h14l2 5"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M5 12v8.5h14V12"/><path d="M10 20.5v-5h4v5"/></symbol>
+  <symbol id="i-trending_down" viewBox="0 0 24 24"><path d="M3 7l6 6 4-4 8 8v2H3Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="m3 7 6 6 4-4 8 8"/><path d="M15 17h6v-6"/></symbol>
+  <symbol id="i-verified" viewBox="0 0 24 24"><path d="M12 2l2.6 1.9 3.2-.2.9 3.1 2.7 1.8-1.1 3 1.1 3-2.7 1.8-.9 3.1-3.2-.2L12 22l-2.6-1.9-3.2.2-.9-3.1-2.7-1.8 1.1-3-1.1-3 2.7-1.8.9-3.1 3.2.2Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M12 2l2.6 1.9 3.2-.2.9 3.1 2.7 1.8-1.1 3 1.1 3-2.7 1.8-.9 3.1-3.2-.2L12 22l-2.6-1.9-3.2.2-.9-3.1-2.7-1.8 1.1-3-1.1-3 2.7-1.8.9-3.1 3.2.2Z"/><path d="m8.5 12 2.5 2.5 4.6-5"/></symbol>
+  <symbol id="i-verified_user" viewBox="0 0 24 24"><path d="M12 2.8 19.5 5.6v6c0 4.8-3.3 8-7.5 9.6-4.2-1.6-7.5-4.8-7.5-9.6v-6Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M12 2.8 19.5 5.6v6c0 4.8-3.3 8-7.5 9.6-4.2-1.6-7.5-4.8-7.5-9.6v-6Z"/><path d="m8.8 12 2.2 2.2 4.4-4.6"/></symbol>
+  <symbol id="i-visibility" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3.2"/><circle cx="13.2" cy="10.8" r="0.9" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-volunteer_activism" viewBox="0 0 24 24"><path d="M12 11.5s-4.2-2.4-4.2-5.4A2.4 2.4 0 0 1 12 4.8a2.4 2.4 0 0 1 4.2 1.3c0 3-4.2 5.4-4.2 5.4Z" fill="currentColor" fill-opacity=".22" stroke="none"/><path d="M12 11.5s-4.2-2.4-4.2-5.4A2.4 2.4 0 0 1 12 4.8a2.4 2.4 0 0 1 4.2 1.3c0 3-4.2 5.4-4.2 5.4Z"/><path d="M2.5 14.5H6l4 2h4a1.5 1.5 0 0 1 0 3H9.5"/><path d="M14 19.5l5-3a1.6 1.6 0 0 1 2 2.4L16 22.2H7l-4.5-1.4"/></symbol>
+  <symbol id="i-wifi_off" viewBox="0 0 24 24"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5.5 12.3a10 10 0 0 1 13 0"/><path d="M9 15.8a5 5 0 0 1 6 0"/><path d="M3 3l18 18"/><circle cx="12" cy="19" r="1.3" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-work" viewBox="0 0 24 24"><path d="M3 9.5A2.5 2.5 0 0 1 5.5 7h13A2.5 2.5 0 0 1 21 9.5V13H3Z" fill="currentColor" fill-opacity=".22" stroke="none"/><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/><path d="M11 12h2v2.5h-2Z"/></symbol>
 </svg>
 
 <!-- ============ HEADER ============ -->
@@ -555,6 +590,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 
   <div class="feature reveal">
     <figure class="model-art">
+      <span class="sticker s-free" aria-hidden="true">Free</span>
       <img src="./assets/photos/girls-with-goals-open-book.jpg" alt="The Girls with Goals journal, South African edition, opened to show its front and back covers" width="2000" height="1400" loading="lazy">
     </figure>
     <div class="model-copy">
@@ -580,7 +616,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap">
     <div class="head reveal">
       <p class="eyebrow">The Scale of the Problem</p>
-      <h2 id="scale-h" class="h h2">This is not one continent’s problem.</h2>
+      <h2 id="scale-h" class="h h2">This is not <span class="squig">one continent’s problem.</span></h2>
       <p class="lead">It is every country’s problem, and it is solvable in every country.</p>
     </div>
     <div class="grid g2 mt-l">
@@ -605,26 +641,26 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap">
     <div class="head reveal">
       <p class="eyebrow">What Girls with Goals Does</p>
-      <h2 id="does-h" class="h h2">It does three things that nothing else in a girl’s school day does.</h2>
+      <h2 id="does-h" class="h h2">It does three things that nothing else in a girl’s <span class="squig">school day</span> does.</h2>
     </div>
     <div class="grid g3 mt-l">
       <article class="card reveal">
         <span class="num coral">01</span>
         <h3 class="h h3">It shows her where her subjects lead</h3>
         <p>Mathematics, physical science, accounting and life sciences stop being homework. They become doors to named careers, explained in plain language.</p>
-        <div class="shot"><img src="./assets/photos/stem-mentor.webp" alt="Illustration of an engineer showing girls a blueprint" width="1448" height="1086" loading="lazy"></div>
+        <div class="shot"><img src="./assets/slider/slide-06.jpg" alt="Women from Sibanye-Stillwater at their stand on the expo floor" width="2000" height="1333" loading="lazy"></div>
       </article>
       <article class="card reveal">
         <span class="num gold">02</span>
         <h3 class="h h3">It builds the belief that she belongs there</h3>
         <p>She meets illustrated women in science, technology, engineering, medicine, law, business and more, with different skin tones, hair, faiths and heritage, so every girl sees herself on the page.</p>
-        <div class="shot"><img src="./assets/photos/science-lab.webp" alt="Illustration of a scientist guiding two girls at a microscope" width="1448" height="1086" loading="lazy"></div>
+        <div class="shot"><img src="./assets/gallery/on-stage-healthcare.jpg" alt="Healthcare professionals speaking to the girls from the stage" width="2000" height="1714" loading="lazy"></div>
       </article>
       <article class="card reveal">
         <span class="num lilac">03</span>
         <h3 class="h h3">It turns a dream into a plan</h3>
         <p>Goals, values, decisions and accountability, written by her, in her own hand, in a book she keeps.</p>
-        <div class="shot"><img src="./assets/photos/girl-journaling.webp" alt="Illustration of a girl writing her goals beside her journal" width="1448" height="1086" loading="lazy"></div>
+        <div class="shot"><img src="./assets/slider/slide-02.jpg" alt="Girls in the hall writing in their notebooks during the programme" width="2000" height="1333" loading="lazy"></div>
       </article>
     </div>
   </div>
@@ -632,13 +668,14 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 <!-- ============ MODEL + WHY INSTITUTIONS CHOOSE IT ============ -->
 <section class="sec bg-indigo" id="model" aria-labelledby="inst-h">
+  <div class="parallax" aria-hidden="true"></div>
   <div class="wrap">
     <blockquote class="quote-card reveal">
       <span class="qm" aria-hidden="true">“</span>
       <p class="h">An institution buys. A girl receives it free. <span>Her name and a letter written for her sit inside.</span></p>
     </blockquote>
     <div class="head mt-l reveal">
-      <h2 id="inst-h" class="h h2">Why Institutions Choose It</h2>
+      <h2 id="inst-h" class="h h2">Why Institutions <span class="squig">Choose It</span></h2>
     </div>
     <ul class="grid g5 mt-m inst">
       <li class="card dark reveal"><span class="icon dk"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-autorenew"/></svg></span><h3 class="h">One book, used again and again, not a single workshop that ends.</h3></li>
@@ -654,7 +691,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 <section class="sec bg-white" id="proof" aria-labelledby="proof-h">
   <div class="wrap">
     <div class="head reveal">
-      <h2 id="proof-h" class="h h2">Proof That We Deliver</h2>
+      <h2 id="proof-h" class="h h2">Proof That <span class="squig">We Deliver</span></h2>
       <p class="lead">On <strong>20 October 2026</strong>, with the support of <strong>Sibanye-Stillwater, Harmony Gold, Lenmed and Lusenga Inc</strong>, our first Career Expo put more than <strong>500 girls</strong> in front of the careers their subjects lead to.</p>
       <p class="lead">Read the report and see the photographs in <a class="mail" href="#past-events">Past Events</a>.</p>
     </div>
@@ -671,7 +708,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap">
     <div class="head reveal">
       <p class="eyebrow">Why Girls with Goals</p>
-      <h2 id="why-h" class="h h2">The window is adolescence. The time is now.</h2>
+      <h2 id="why-h" class="h h2">The window is adolescence. <span class="squig">The time is now.</span></h2>
     </div>
 
     <div class="prob mt-l">
@@ -736,7 +773,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap">
     <div class="head reveal">
       <p class="eyebrow">The Book</p>
-      <h2 id="book-h" class="h h2">Not a motivational book. A system.</h2>
+      <h2 id="book-h" class="h h2">Not a motivational book. <span class="squig">A system.</span></h2>
       <p class="motto" style="margin-top:4px">See It. Believe It. Plan It. Become It.</p>
       <p class="lead">It is the journey every page of the journal takes a girl on.</p>
     </div>
@@ -809,7 +846,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap">
     <div class="head reveal">
       <p class="eyebrow">Impact and SDG Alignment</p>
-      <h2 id="impact-h" class="h h2">Impact at scale, measured and reported.</h2>
+      <h2 id="impact-h" class="h h2">Impact at scale, <span class="squig">measured and reported.</span></h2>
     </div>
 
     <h3 class="h h3 sub reveal">Scaling Vision</h3>
@@ -852,7 +889,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap">
     <div class="head reveal">
       <p class="eyebrow">Governance and Safeguarding</p>
-      <h2 id="gov-h" class="h h2">Impact without integrity is failure.</h2>
+      <h2 id="gov-h" class="h h2">Impact without <span class="squig">integrity</span> is failure.</h2>
     </div>
     <div class="grid g4 mt-l">
       <article class="card reveal"><span class="icon coral"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-balance"/></svg></span><h3 class="h">Ethical programme design</h3></article>
@@ -869,7 +906,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap">
     <div class="head reveal">
       <p class="eyebrow">Partners and Bulk Orders</p>
-      <h2 id="partners-h" class="h h2">Put your name behind the girls who will lead.</h2>
+      <h2 id="partners-h" class="h h2">Put your name behind <span class="squig">the girls who will lead.</span></h2>
     </div>
 
     <h3 class="h h3 sub reveal">Who Partners With Us</h3>
@@ -919,7 +956,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap">
     <div class="head reveal">
       <p class="eyebrow">Past Events</p>
-      <h2 id="events-h" class="h h2">We show up for girls.</h2>
+      <h2 id="events-h" class="h h2">We show up <span class="squig">for girls.</span></h2>
       <p class="lead">Each event has its own report and a gallery.</p>
     </div>
 
@@ -1023,7 +1060,8 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap">
     <div class="head reveal">
       <p class="eyebrow">Career Expo 2026: Gallery</p>
-      <h2 id="gallery-h" class="h h2">The day in pictures.</h2>
+      <span class="sticker s-date" aria-hidden="true">20 Oct 2026</span>
+      <h2 id="gallery-h" class="h h2">The day <span class="squig">in pictures.</span></h2>
       <p class="lead">More than 500 girls, one hall, one day that put their futures in front of them.</p>
     </div>
     <ol class="albums mt-l">
@@ -1042,7 +1080,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap">
     <div class="head reveal">
       <p class="eyebrow">Career Expo 2026: Our Supporters</p>
-      <h2 id="sup-h" class="h h2">The people and companies who made the day possible.</h2>
+      <h2 id="sup-h" class="h h2">The people and companies who made <span class="squig">the day possible.</span></h2>
       <p class="lead">These four partners stood with 500 girls on 20 October 2026. Every girl attended at no cost, because they paid for the day.</p>
     </div>
     <div class="grid g2 mt-l sup">
@@ -1092,7 +1130,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap">
     <div class="head reveal">
       <p class="eyebrow">Contact</p>
-      <h2 id="contact-h" class="h h2">Let us put Girls with Goals in the hands of girls who need it.</h2>
+      <h2 id="contact-h" class="h h2">Let us put Girls with Goals in the hands of <span class="squig">girls who need it.</span></h2>
       <p class="lead">Whether you represent a government, an agency, a foundation, a company or a community, we welcome a direct conversation about bulk orders, national distribution partnerships and strategic collaboration.</p>
     </div>
 
@@ -1125,7 +1163,7 @@ button,input,select,textarea{font:inherit;color:inherit}
           </div>
           <div class="actions">
             <button class="btn bp" type="submit" id="send-btn"><span id="send-label">Send message</span> <span class="ar"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow_outward"/></svg></span></button>
-            <p id="send-note">Enquiries about books and partnerships go to partnerships@ascendgirlsnetwork.com. Enquiries about events go to events@ascendgirlsnetwork.com.</p>
+            <p id="send-note" role="status"></p>
           </div>
         </form>
         <div class="done" role="status">
@@ -1197,6 +1235,22 @@ button,input,select,textarea{font:inherit;color:inherit}
   window.addEventListener('scroll', markActive, { passive: true });
   window.addEventListener('resize', markActive);
   markActive();
+
+  // Parallax photo behind "Why Institutions Choose It": it drifts slower than the page
+  var px = document.querySelector('#model .parallax');
+  if (px && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var pxSec = px.parentNode, pxTick = false;
+    var movePx = function () {
+      pxTick = false;
+      var r = pxSec.getBoundingClientRect(), vh = window.innerHeight;
+      if (r.bottom < 0 || r.top > vh) return;
+      var progress = (vh - r.top) / (vh + r.height);          // 0 as it enters, 1 as it leaves
+      px.style.transform = 'translate3d(0,' + ((progress - .5) * .3 * r.height).toFixed(1) + 'px,0)';
+    };
+    window.addEventListener('scroll', function () { if (!pxTick) { pxTick = true; requestAnimationFrame(movePx); } }, { passive: true });
+    window.addEventListener('resize', movePx);
+    movePx();
+  }
 
   // Reveal on scroll
   var els = document.querySelectorAll('.reveal');
