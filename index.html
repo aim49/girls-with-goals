@@ -128,20 +128,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .hero .btns{margin-top:36px}
 .global{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-size:15px;color:var(--muted)}
 .global .ms{color:var(--indigo);font-size:20px}
-.shows{position:relative;margin:8px calc(-1 * var(--pad)) 0;padding:56px 0;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
-.shows-track{display:flex;gap:22px;width:max-content;animation:shows 60s linear infinite}
-.shows:hover .shows-track{animation-play-state:paused}
-@keyframes shows{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-.shot-card{flex-shrink:0;height:270px;aspect-ratio:3/4;border-radius:24px;overflow:hidden;border:6px solid #fff;background:#FBE3CF;box-shadow:0 18px 36px -20px rgba(35,26,58,.30),0 4px 12px -6px rgba(35,26,58,.10);transform:rotate(-2deg)}
-.shot-card:nth-child(even){transform:rotate(3deg) translateY(10px)}
-.shot-card img{width:100%;height:100%;object-fit:cover}
-.shot-card.cut{background:var(--gold)}
-.shot-card.cut img{object-position:center top}
-.shot-card.book{background:var(--gold-soft)}
-.shot-card.book img{object-fit:contain;padding:18px}
-@media (max-width:760px){.shows{padding:40px 0}.shot-card{height:200px;border-width:4px;border-radius:18px}.shows-track{gap:14px}}
-@media (prefers-reduced-motion:reduce){.shows-track{animation:none}}
-.feature{margin:24px auto 0;max-width:var(--max);background:#fff;border-radius:36px;padding:48px 56px 48px 40px;display:grid;grid-template-columns:6fr 6fr;gap:48px;align-items:center;text-align:left;box-shadow:0 40px 70px -46px rgba(35,26,58,.45);position:relative;overflow:hidden}
+.feature{margin:64px auto 0;max-width:var(--max);background:#fff;border-radius:36px;padding:48px 56px 48px 40px;display:grid;grid-template-columns:6fr 6fr;gap:48px;align-items:center;text-align:left;box-shadow:0 40px 70px -46px rgba(35,26,58,.45);position:relative;overflow:hidden}
 .feature::after{content:"";position:absolute;right:-90px;top:-90px;width:240px;height:240px;border-radius:50%;background:var(--lilac-bg);pointer-events:none}
 .pill{display:inline-flex;align-items:center;gap:8px;background:var(--coral-soft);color:var(--brick);border-radius:999px;padding:7px 16px;font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
 .pill .ms{font-size:18px}
@@ -226,6 +213,8 @@ button,input,select,textarea{font:inherit;color:inherit}
 .what-is{display:grid;grid-template-columns:4fr 8fr;gap:40px;align-items:center}
 .what-is .art{background:var(--gold-soft);border-radius:24px;padding:28px;display:flex;justify-content:center}
 .what-is .art img{height:280px;width:auto;transform:rotate(-4deg);filter:drop-shadow(0 20px 26px rgba(35,26,58,.3))}
+.what-is .art.mock{padding:0;overflow:hidden;background:#FAEFC8;align-items:center}
+.what-is .art.mock img{width:100%;height:100%;max-height:none;object-fit:cover;transform:scale(1.25);filter:none}
 .what-is .big{font-size:clamp(19px,1.8vw,23px);line-height:1.5;color:var(--ink)}
 .what-is p+p{margin-top:14px}
 .inside .card{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
@@ -484,6 +473,7 @@ select,option{font-weight:300}
   -webkit-mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.85) 45%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.85) 45%,transparent 100%)}
 .hero > :not(.hero-bg){position:relative;z-index:1}
 @media (max-width:760px){.hero-bg{height:760px;background-position:center top}}
+@media (max-width:760px){}
 
 /* ===== "Why Institutions Choose It" (#model): lilac journey. The promise in a white card, reasons as stops along a dotted path ===== */
 #model{background:var(--lilac-bg);color:var(--ink)}
@@ -608,6 +598,101 @@ select,option{font-weight:300}
 .site-head{transition:background-color .3s ease,box-shadow .3s ease,backdrop-filter .3s ease}
 .site-head.scrolled{background:rgba(255,255,255,.68);-webkit-backdrop-filter:blur(16px) saturate(170%);backdrop-filter:blur(16px) saturate(170%);box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 8px 28px rgba(35,26,58,.10)}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.site-head.scrolled{background:rgba(255,255,255,.94)}}
+
+/* Hero: copy on the left, the journal covers sliding out to the right */
+.hero-top{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:center;text-align:left}
+.hero-top .hero-copy h1{margin:22px 0 0}
+.hero-top .hero-copy .lead{margin:26px 0 0}
+.hero-top .hero-copy .btns{justify-content:flex-start}
+.hero-top .hero-copy .eyebrow::before{display:none}
+.hero-top .hero-copy h1{font-size:clamp(34px,4vw,54px);line-height:1.08;letter-spacing:-.02em;max-width:15ch}
+.hero-top .hero-copy .lead{font-size:clamp(16px,1.15vw,17.5px);max-width:52ch;margin-top:22px}
+.hero-top .hero-copy .motto{font-size:clamp(24px,2.3vw,31px);margin-top:20px}
+.hero-top .hero-copy .btns{margin-top:28px}
+.hero-top .hero-copy .btn{font-size:14.5px}
+.hero-top .hero-copy .btns{gap:12px}
+@media (min-width:1200px) and (max-width:1320px){.hero-top .hero-copy .btn{font-size:14px;padding:0 6px 0 18px;gap:10px;min-height:46px}.hero-top .hero-copy .btn .ar{width:32px;height:32px}}
+.hero-top .hero-copy .global{font-size:14px;margin-top:22px}
+.cover-slider{position:relative;width:min(calc(100% - 128px),440px,max(280px,calc((100vh - 230px) * .707)));aspect-ratio:1414/2000;justify-self:center;align-self:center;margin:0}
+.cs-item{position:absolute;inset:0;width:100%;height:100%;border-radius:12px;box-shadow:0 34px 60px -26px rgba(35,26,58,.5),0 10px 22px -12px rgba(35,26,58,.25);opacity:0;transform:translateX(-90px);transition:opacity .6s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+.cs-item.is-active{opacity:1;transform:none}
+.cs-item.from-right{transform:translateX(90px)}
+.cs-item.out-right{opacity:0;transform:translateX(140px)}
+.cs-item.out-left{opacity:0;transform:translateX(-140px)}
+.cs-btn{position:absolute;top:50%;z-index:3;width:48px;height:48px;margin-top:-24px;border-radius:50%;border:0;background:#fff;color:var(--indigo);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 10px 24px -10px rgba(35,26,58,.45),0 2px 6px -2px rgba(35,26,58,.2);transition:transform .2s ease,background-color .2s ease,color .2s ease}
+.cs-btn svg{width:20px;height:20px;fill:currentColor}
+.cs-btn.cs-prev{left:-64px}.cs-btn.cs-next{right:-64px}
+@media (max-width:1199px){.cs-btn{width:44px;height:44px;margin-top:-22px}.cs-btn.cs-prev{left:-54px}.cs-btn.cs-next{right:-54px}}
+.cs-btn:hover{background:var(--coral);color:#fff;transform:scale(1.06)}
+.cs-btn:active{transform:scale(.96)}
+.cs-btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.cs-item{transition:opacity .3s ease}}
+@media (min-width:901px){.hero > .doodle{display:none}}
+@media (max-width:1199px){
+  .hero-top{grid-template-columns:1fr;gap:8px;text-align:center}
+  .hero-top .hero-copy h1,.hero-top .hero-copy .lead{margin-left:auto;margin-right:auto}
+  .hero-top .hero-copy .btns{justify-content:center}
+  .hero-top .hero-copy .eyebrow::before{display:inline}
+  .cover-slider{width:min(calc(100% - 112px),340px);margin:40px auto 56px}
+}
+
+/* Polish: themed text selection, and finger-sized tap targets on touch screens */
+::selection{background:rgba(245,173,9,.35);color:var(--ink)}
+@media (pointer:coarse){
+  .foot-links{gap:0 24px}
+  .foot-links a{display:inline-block;padding:9px 0}
+  .foot-mail a{display:inline-block;padding:10px 0}
+  .mail{display:inline-block;padding:10px 0 2px;margin-bottom:4px}
+  a[href*="google.com/maps"]{display:inline-block;padding:12px 0}
+}
+
+/* Polish: brick text on the soft coral surfaces darkened to pass WCAG AA (was 4.3:1) */
+.pill,.duo .note,.t4,.b-comm,.num.coral,.icon.coral{color:#A8321A}
+
+/* Hero: hand-drawn arrow beside the heading, pointing at the journal covers */
+.hero-copy h1{position:relative}
+.hero-arrow{position:absolute;left:100%;top:46%;width:clamp(110px,10vw,150px);margin-left:18px;color:var(--coral);pointer-events:none;z-index:2}
+.hero-arrow svg{display:block;width:100%;height:auto;overflow:visible;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;animation:arrow-nudge 2.8s ease-in-out infinite}
+@keyframes arrow-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(9px)}}
+@media (max-width:1199px){
+  .hero-arrow{display:none}
+}
+@media (prefers-reduced-motion:reduce){.hero-arrow svg{animation:none}}
+
+/* Gallery photo viewer: full screen, with arrows, thumbnails, keyboard and swipe */
+#gallery .album .ph img{cursor:zoom-in}
+#gallery .album .ph img:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+html.lb-open{overflow:hidden}
+.lightbox{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:#181028;color:#fff;display:none;grid-template-rows:auto minmax(0,1fr) auto}
+.lightbox[open]{display:grid;animation:lb-in .25s ease-out}
+.lightbox::backdrop{background:rgba(24,16,40,.6)}
+@keyframes lb-in{from{opacity:0}to{opacity:1}}
+.lb-top{display:flex;align-items:center;justify-content:space-between;padding:16px clamp(16px,3vw,32px)}
+.lb-count{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;letter-spacing:.04em;color:#E6E0F3;font-variant-numeric:tabular-nums}
+.lb-close,.lb-nav{width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background-color .2s ease,transform .2s ease}
+.lb-close svg,.lb-nav svg{width:22px;height:22px;fill:currentColor}
+.lb-close:hover,.lb-nav:hover{background:var(--coral)}
+.lb-nav:active,.lb-close:active{transform:scale(.95)}
+.lb-close:focus-visible,.lb-nav:focus-visible,.lb-thumb:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.lb-stage{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:clamp(8px,2vw,24px);padding:0 clamp(12px,3vw,32px);min-height:0}
+.lb-fig{margin:0;height:100%;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.lb-img{max-width:100%;max-height:calc(100% - 72px);object-fit:contain;border-radius:12px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+.lb-cap{max-width:70ch;text-align:center;font-size:15px;line-height:1.5;color:#D9D1EC}
+.lb-cap b{display:block;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:17px;margin-bottom:2px}
+.lb-thumbs{display:flex;gap:10px;justify-content:center;overflow-x:auto;padding:16px clamp(16px,3vw,32px) 20px;scrollbar-width:thin}
+.lb-thumb{flex:0 0 auto;width:84px;height:60px;padding:0;border:2px solid transparent;border-radius:10px;overflow:hidden;background:none;cursor:pointer;opacity:.55;transition:opacity .2s ease,border-color .2s ease}
+.lb-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.lb-thumb:hover{opacity:.9}
+.lb-thumb.is-on{opacity:1;border-color:var(--gold)}
+@media (max-width:700px){
+  .lb-stage{grid-template-columns:minmax(0,1fr);position:relative;padding:0 8px}
+  .lb-nav{position:absolute;top:40%;z-index:2;width:44px;height:44px;background:rgba(24,16,40,.6)}
+  .lb-prev{left:12px}.lb-next{right:12px}
+  .lb-thumbs{justify-content:flex-start}
+  .lb-thumb{width:64px;height:46px}
+  .lb-cap{font-size:14px;padding:0 8px}
+}
+@media (prefers-reduced-motion:reduce){.lightbox[open]{animation:none}}
 </style>
 </head>
 <body>
@@ -689,39 +774,27 @@ select,option{font-weight:300}
 <!-- ============ 1. HOME: HERO ============ -->
 <section class="hero" id="hero" aria-labelledby="hero-h">
   <div class="hero-bg" aria-hidden="true"></div>
-  <p class="eyebrow">Girls with Goals</p>
-  <h1 id="hero-h" class="h">Every girl deserves a <span class="map">map<svg aria-hidden="true" viewBox="0 0 120 14" preserveAspectRatio="none"><path d="M3 9c30-7 70-8 114-3" fill="none" stroke="#F5AD09" stroke-width="4" stroke-linecap="round"/></svg></span> to her future.</h1>
-  <p class="lead">Girls with Goals puts career clarity, confidence and a real plan into the hands of girls at the age when their futures are decided. Institutions buy it. She receives it free.</p>
-  <p class="motto">“See It. Believe It. Plan It. Become It.”</p>
-  <div class="btns">
-    <a class="btn bp" href="#contact" data-enquiry="partnership">Partner with us <span class="ar"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow_outward"/></svg></span></a>
-    <a class="btn bi" href="#contact" data-enquiry="bulk">Order Girls with Goals in bulk <span class="ar"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow_outward"/></svg></span></a>
-    <a class="btn bw" href="#contact">Contact us</a>
-  </div>
-  <p class="global"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-public"/></svg>Girls with Goals serves girls in every country.</p>
-
-  <div class="shows" aria-label="Photographs from the Career Expo, 20 October 2026">
-    <div class="shows-track">
-      <figure class="shot-card"><img src="./assets/slider/slide-01.jpg" alt="Girls dancing and celebrating at the Career Expo" width="2000" height="1333"></figure>
-      <figure class="shot-card"><img src="./assets/slider/slide-02.jpg" alt="Girls in the hall taking notes during the programme" width="2000" height="1333" loading="lazy"></figure>
-      <figure class="shot-card"><img src="./assets/slider/slide-03.jpg" alt="A speaker on stage in front of the Career Expo backdrop" width="2000" height="1829" loading="lazy"></figure>
-      <figure class="shot-card"><img src="./assets/slider/slide-04.jpg" alt="Girls smiling and making peace signs in the hall" width="2000" height="1333" loading="lazy"></figure>
-      <figure class="shot-card"><img src="./assets/slider/slide-05.jpg" alt="Lenmed’s team at their stand" width="1688" height="2000" loading="lazy"></figure>
-      <figure class="shot-card"><img src="./assets/slider/slide-06.jpg" alt="The Sibanye-Stillwater team at their stand with virtual reality headsets" width="2000" height="1333" loading="lazy"></figure>
-      <figure class="shot-card"><img src="./assets/slider/slide-07.jpg" alt="Lusenga Inc’s team talking with girls at their stand" width="2000" height="1590" loading="lazy"></figure>
-      <figure class="shot-card"><img src="./assets/slider/slide-08.jpg" alt="A visitor trying a virtual reality headset on the expo floor" width="1333" height="2000" loading="lazy"></figure>
-      <figure class="shot-card"><img src="./assets/slider/slide-09.jpg" alt="Girls cheering on the steps outside the venue during a prize handover" width="2000" height="1333" loading="lazy"></figure>
-      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-01.jpg" alt="" width="2000" height="1333" loading="lazy"></figure>
-      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-02.jpg" alt="" width="2000" height="1333" loading="lazy"></figure>
-      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-03.jpg" alt="" width="2000" height="1829" loading="lazy"></figure>
-      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-04.jpg" alt="" width="2000" height="1333" loading="lazy"></figure>
-      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-05.jpg" alt="" width="1688" height="2000" loading="lazy"></figure>
-      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-06.jpg" alt="" width="2000" height="1333" loading="lazy"></figure>
-      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-07.jpg" alt="" width="2000" height="1590" loading="lazy"></figure>
-      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-08.jpg" alt="" width="1333" height="2000" loading="lazy"></figure>
-      <figure aria-hidden="true" class="shot-card"><img src="./assets/slider/slide-09.jpg" alt="" width="2000" height="1333" loading="lazy"></figure>
+  <div class="hero-top">
+    <div class="hero-copy">
+      <p class="eyebrow">Girls with Goals</p>
+    <h1 id="hero-h" class="h">Every girl deserves a <span class="map">map<svg aria-hidden="true" viewBox="0 0 120 14" preserveAspectRatio="none"><path d="M3 9c30-7 70-8 114-3" fill="none" stroke="#F5AD09" stroke-width="4" stroke-linecap="round"/></svg></span> to her future.<span class="hero-arrow" aria-hidden="true"><svg viewBox="0 0 120 70"><path d="M6 54c8-14 20-22 30-20 9 2 8 12 0 12s-6-14 8-20c18-8 42-6 64 4"/><path d="M99.5 16.5 108 30l-16 .6"/></svg></span></h1>
+    <p class="lead">Girls with Goals puts career clarity, confidence and a real plan into the hands of girls at the age when their futures are decided. Institutions buy it. She receives it free.</p>
+    <p class="motto">“See It. Believe It. Plan It. Become It.”</p>
+    <div class="btns">
+      <a class="btn bp" href="#contact" data-enquiry="partnership">Partner with us <span class="ar"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow_outward"/></svg></span></a>
+      <a class="btn bi" href="#contact" data-enquiry="bulk">Order Girls with Goals in bulk <span class="ar"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow_outward"/></svg></span></a>
+      <a class="btn bw" href="#contact">Contact us</a>
+    </div>
+    <p class="global"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-public"/></svg>Girls with Goals serves girls in every country.</p>
+    </div>
+    <div class="cover-slider" role="region" aria-roledescription="carousel" aria-label="The Girls with Goals journal covers">
+      <img class="cs-item is-active" src="./assets/photos/girls-with-goals-cover-front.jpg" alt="Front cover of the Girls with Goals journal, South African edition" width="1414" height="2000">
+      <img class="cs-item" src="./assets/photos/girls-with-goals-cover-back.jpg" alt="Back cover of the Girls with Goals journal, South African edition" width="1414" height="2000" aria-hidden="true">
+      <button class="cs-btn cs-prev" type="button" aria-label="Previous cover"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></button>
+      <button class="cs-btn cs-next" type="button" aria-label="Next cover"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg></button>
     </div>
   </div>
+
 
   <div class="feature reveal">
     <figure class="model-art">
@@ -782,19 +855,19 @@ select,option{font-weight:300}
         <span class="num coral">01</span>
         <h3 class="h h3">It shows her where her subjects lead</h3>
         <p>Mathematics, physical science, accounting and life sciences stop being homework. They become doors to named careers, explained in plain language.</p>
-        <div class="shot"><img src="./assets/slider/slide-06.jpg" alt="Women from Sibanye-Stillwater at their stand on the expo floor" width="2000" height="1333" loading="lazy"></div>
+        <div class="shot"><img src="./assets/stock/girl-subjects-careers.webp" alt="A schoolgirl in uniform writing at a desk surrounded by a microscope, science equipment and models of careers" width="1448" height="1086" loading="lazy"></div>
       </article>
       <article class="card reveal">
         <span class="num gold">02</span>
         <h3 class="h h3">It builds the belief that she belongs there</h3>
         <p>She meets illustrated women in science, technology, engineering, medicine, law, business and more, with different skin tones, hair, faiths and heritage, so every girl sees herself on the page.</p>
-        <div class="shot"><img src="./assets/gallery/on-stage-healthcare.jpg" alt="Healthcare professionals speaking to the girls from the stage" width="2000" height="1714" loading="lazy"></div>
+        <div class="shot"><img src="./assets/stock/girl-robotics-mentor.webp" alt="A girl in a lab coat and safety glasses building a small robot car while a smiling woman mentor looks on" width="1448" height="1086" loading="lazy"></div>
       </article>
       <article class="card reveal">
         <span class="num lilac">03</span>
         <h3 class="h h3">It turns a dream into a plan</h3>
         <p>Goals, values, decisions and accountability, written by her, in her own hand, in a book she keeps.</p>
-        <div class="shot"><img src="./assets/slider/slide-02.jpg" alt="Girls in the hall writing in their notebooks during the programme" width="2000" height="1333" loading="lazy"></div>
+        <div class="shot"><img src="./assets/stock/girl-planning-journal.webp" alt="A girl writing in her planner at a sunny desk, smiling as she thinks about her future" width="1448" height="1086" loading="lazy"></div>
       </article>
     </div>
   </div>
@@ -881,7 +954,7 @@ select,option{font-weight:300}
     </div>
 
     <article class="card free mt-l reveal">
-      <figure class="free-art"><img src="./assets/slider/slide-04.jpg" alt="Girls in school uniform smiling and making peace signs at the Career Expo" width="2000" height="1333" loading="lazy"></figure>
+      <figure class="free-art"><img src="./assets/gallery/arrival-girls-gathered.jpg" alt="Girls in school uniform gathered on the steps outside the venue, listening to a speaker" width="2000" height="1333" loading="lazy"></figure>
       <div class="free-copy">
         <span class="icon coral"><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-volunteer_activism"/></svg></span>
         <h3 class="h h3">Why It Is Free to the Girl</h3>
@@ -917,7 +990,7 @@ select,option{font-weight:300}
     </ol>
 
     <div class="what-is mt-l reveal">
-      <div class="art"><img src="./assets/photos/girls-with-goals-book.webp" alt="The Girls with Goals journal cover" width="1122" height="1402" loading="lazy"></div>
+      <div class="art mock"><img src="./assets/photos/girls-with-goals-book-covers.webp" alt="The Girls with Goals journal, South African edition, showing its front and back covers" width="2000" height="1500" loading="lazy"></div>
       <div>
         <p class="eyebrow left">What It Is</p>
         <p class="big" style="margin-top:14px"><strong>Girls with Goals: A Career Colouring and Confidence Journal for Girls</strong> is a practical, self guided life skills and goal setting system for girls in high school.</p>
@@ -1505,6 +1578,90 @@ select,option{font-weight:300}
   var set = function () { head.classList.toggle('scrolled', window.scrollY > 8); };
   window.addEventListener('scroll', set, { passive: true });
   set();
+})();
+</script>
+
+<script>
+/* Hero cover slider: previous / next buttons, auto-advance every 5 seconds */
+(function () {
+  var box = document.querySelector('.cover-slider');
+  if (!box) return;
+  var items = [].slice.call(box.querySelectorAll('.cs-item')), i = 0, timer;
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function go(dir) {
+    var old = items[i];
+    i = (i + dir + items.length) % items.length;
+    var cur = items[i];
+    cur.style.transition = 'none';
+    cur.className = 'cs-item' + (dir > 0 ? '' : ' from-right');
+    void cur.offsetWidth;
+    cur.style.transition = '';
+    old.className = 'cs-item ' + (dir > 0 ? 'out-right' : 'out-left');
+    old.setAttribute('aria-hidden', 'true');
+    cur.className = 'cs-item is-active';
+    cur.removeAttribute('aria-hidden');
+  }
+  function restart() { clearInterval(timer); if (!still) timer = setInterval(function () { go(1); }, 5000); }
+  box.querySelector('.cs-btn.cs-next').addEventListener('click', function () { go(1); restart(); });
+  box.querySelector('.cs-btn.cs-prev').addEventListener('click', function () { go(-1); restart(); });
+  box.addEventListener('mouseenter', function () { clearInterval(timer); });
+  box.addEventListener('mouseleave', restart);
+  restart();
+})();
+</script>
+
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <div class="lb-top"><span class="lb-count" aria-live="polite"></span><button class="lb-close" type="button" aria-label="Close photo viewer"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button></div>
+  <div class="lb-stage">
+    <button class="lb-nav lb-prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></button>
+    <figure class="lb-fig"><img class="lb-img" src="" alt=""><figcaption class="lb-cap"></figcaption></figure>
+    <button class="lb-nav lb-next" type="button" aria-label="Next photo"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg></button>
+  </div>
+  <div class="lb-thumbs" role="group" aria-label="Choose a photo"></div>
+</dialog>
+
+<script>
+/* Gallery: click a photo to open it full screen; move between photos with the arrows, the thumbnails, the keyboard or a swipe */
+(function () {
+  var lb = document.getElementById('lightbox');
+  var photos = [].slice.call(document.querySelectorAll('#gallery .album .ph img'));
+  if (!lb || !photos.length || typeof lb.showModal !== 'function') return;
+  var img = lb.querySelector('.lb-img'), cap = lb.querySelector('.lb-cap'), count = lb.querySelector('.lb-count'), strip = lb.querySelector('.lb-thumbs'), i = 0;
+  var thumbs = photos.map(function (p, k) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'lb-thumb'; b.setAttribute('aria-label', 'Show photo ' + (k + 1) + ': ' + p.alt);
+    var t = document.createElement('img'); t.src = p.getAttribute('src'); t.alt = ''; t.loading = 'lazy';
+    b.appendChild(t);
+    b.addEventListener('click', function () { show(k); });
+    strip.appendChild(b);
+    return b;
+  });
+  function show(k) {
+    i = (k + photos.length) % photos.length;
+    var p = photos[i], title = p.closest('.album').querySelector('h3');
+    img.src = p.getAttribute('src'); img.alt = p.alt;
+    cap.textContent = '';
+    if (title) { var b = document.createElement('b'); b.textContent = title.textContent.replace(/^\d+\.\s*/, ''); cap.appendChild(b); }
+    cap.appendChild(document.createTextNode(p.alt));
+    count.textContent = (i + 1) + ' / ' + photos.length;
+    thumbs.forEach(function (t, n) { t.classList.toggle('is-on', n === i); t.setAttribute('aria-current', n === i ? 'true' : 'false'); });
+    thumbs[i].scrollIntoView({ block: 'nearest', inline: 'center' });
+  }
+  function open(k) { show(k); lb.showModal(); document.documentElement.classList.add('lb-open'); }
+  lb.addEventListener('close', function () { document.documentElement.classList.remove('lb-open'); photos[i].focus({ preventScroll: true }); });
+  photos.forEach(function (p, k) {
+    p.tabIndex = 0; p.setAttribute('role', 'button'); p.setAttribute('aria-label', 'Open photo full screen: ' + p.alt);
+    p.addEventListener('click', function () { open(k); });
+    p.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(k); } });
+  });
+  lb.querySelector('.lb-prev').addEventListener('click', function () { show(i - 1); });
+  lb.querySelector('.lb-next').addEventListener('click', function () { show(i + 1); });
+  lb.querySelector('.lb-close').addEventListener('click', function () { lb.close(); });
+  lb.addEventListener('click', function (e) { if (e.target === lb || e.target.classList.contains('lb-stage') || e.target.classList.contains('lb-fig')) lb.close(); });
+  lb.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') show(i - 1); if (e.key === 'ArrowRight') show(i + 1); });
+  var x0 = null;
+  lb.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1)); x0 = null; });
 })();
 </script>
 </body>
